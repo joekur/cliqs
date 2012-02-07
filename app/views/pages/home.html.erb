@@ -1,9 +1,10 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Sign up", signup_path %><br>
 
 <% if !signed_in? %>
+	<%= link_to "Sign up", signup_path %><br>
 	<%= link_to "Sign in", signin_path %>
 <% else %>
+	Name: <%= current_user.name %><br>
 	<%= link_to "Sign out", signout_path %>
 <% end %>

@@ -32,6 +32,9 @@ class User < ActiveRecord::Base
     return user if user.has_password?(submitted_password)
   end
   
+  def name
+    "#{first_name} #{last_name}"
+  end
   
   private #-----------------------------------------------------------------------
     
