@@ -1,0 +1,322 @@
+body {
+	background: white;
+}
+
+#container {
+	z-index: 1;
+	width: 1000px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.80);
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+/* NAVIGATION MENU -----------------------------------------------------------------*/
+
+#topbar {
+	background: gray;
+	width: 100%;
+	z-index: 2;
+	position: relative;
+}
+
+#nav {
+	height: 35px;
+	width: 1000px;
+	margin: 0 auto;
+	z-index: 2;
+	position: relative;
+}
+
+ul.mainnav,
+ul.cliqnav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+ul.mainnav li,
+ul.cliqnav li {
+	float: left;
+	position: relative;
+	display: inline;
+	padding: 0 10px;
+	margin: 0;
+	height: 100%;
+}
+ul.mainnav li a,
+ul.cliqnav li a {
+	color: white;
+	font-size: 15pt !important;
+	line-height: 100%;
+	height: 30px;
+	display: block;
+	text-decoration: none;
+	padding-top: 5px;
+}
+ul.cliqnav li a {
+	font-size: 13pt !important;
+	height: 25px;
+	padding-top: 10px;
+}
+ul.mainnav li.active {
+	background: #3f3f3f;
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+}
+
+.float_right {
+	float: right;
+}
+
+#mainSettingsLink {
+	background: #3F3F3F;
+	width: 15px;
+	height: 15px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: gray;
+	cursor: pointer;
+	position: relative;
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+}
+#mainSettingsLink:hover {
+	background: #4e97ca;
+	border-color: #606060;
+}
+#mainSettingsLink.mainSettingsLinkActive {
+	background: #4e97ca;
+	border-color: #606060;
+}
+
+#mainSettingsDropdown {
+	display: none;
+	position: absolute;
+	right: -10px;
+	top: 25px;
+	background: #606060;
+	width: 120px;
+	padding: 6px 0;
+}
+#mainSettingsDropdown a {
+	display: block;
+	font-size: 11pt;
+	text-decoration: none;
+	padding: 4px 20px;
+	color: white;
+}
+#mainSettingsDropdown a:hover {
+	color: #AAAAAA;
+}
+
+.dropdownSpacer {
+	width: 100%;
+	height: 0;
+	margin: 6px 0;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #424242;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #919191;
+}
+
+.save_cliq_order_box {
+	background: gray;
+	padding: 5px 0;
+	position: absolute;
+	width: 70px;
+	top: 35px;
+	left: 465px;
+	text-align: center;
+	display: none;
+}
+a#save_cliq_order {
+	color: white;
+	font-size: 12pt;
+}
+
+/* CLIQ NAVIGATION MENU -----------------------------------------------------------------*/
+#cliqnav {
+	height: 35px;
+	width: 1000px;
+	background: #3f3f3f;
+	margin-bottom: 20px;
+	
+	-webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	box-shadow: inset 0 5px 10px rgba(0,0,0,.5);
+	
+}
+
+img.home {
+	position: relative;
+	top: 0px;
+	/*width: 31px;
+	height: 24px;*/
+	width: 20px;
+	height: 16px;
+}
+
+/* FORMS -----------------------------------------------------------------*/
+
+.placeholder {
+	color: #aaa;
+}
+
+textarea {
+	resize: vertical;
+}
+
+/* CLIQ INDEX -----------------------------------------------------------------*/
+
+#left_sidebar {
+	float: left;
+	width: 200px;
+	height: 800px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	margin-right: 40px;
+}
+
+#cliq_index_content {
+	float: left;
+	width: 710px;
+}
+
+#new_post_btn {
+	display: block;
+}
+
+#new_post_container {
+	padding: 20px;
+	background: #cef1ff;
+	display: none;
+}
+
+.add_post_body {
+	margin: 0;
+	margin-left: 0;
+}
+
+.side_box {
+	margin: 20px 0;
+}
+
+/* POSTS -----------------------------------------------------------------*/
+
+.post_container {
+	margin-top: 20px;
+	padding: 20px;
+	background: #cef1ff;
+	width: 500px;
+	position: relative;
+}
+
+.post_author {
+	margin-bottom: 6px;
+}
+
+.post_author a {
+	font-weight: bold;
+	font-size: 12pt;
+	text-decoration: none;
+}
+.post_author a:hover,
+.comment_author a:hover {
+	text-decoration: none;
+}
+
+.post_body {
+	
+}
+
+.post_time {
+	margin-top: 8px;
+	font-size: 9pt;
+}
+
+/* COMMENTS -----------------------------------------------------------------*/
+
+button.add_comment_btn {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: transparent;
+	padding: 10px;
+	opacity: 0.2;
+	filter:alpha(opacity=20); /* For IE8 and earlier */
+}
+button.add_comment_btn:hover {
+	opacity: 1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.add_comment_container {
+	display: none;
+	background: #fff4ce;
+	padding: 10px;
+	width: 520px;
+}
+.add_comment_container form {
+	margin-bottom: 0;
+}
+
+.add_comment_body {
+	width: 500px;
+	height: 50px;
+}
+
+.submit_comment_btn {
+	/*margin: 0 20px;*/
+}
+
+.cancel_comment_btn {
+	
+}
+
+.comment_container {
+	width: 480px;
+	padding: 10px 20px 10px 40px;
+	background: #ffda77;
+}
+.comment_container:nth-child(even) {
+	background: #fff4ce;
+}
+
+.comment_author {
+	margin-bottom: 6px;	
+}
+
+.comment_author a {
+	font-weight: bold;
+	font-size: 11pt;
+	text-decoration: none;
+}
+
+.comment_body {
+	
+}
+
+.comment_time {
+	margin-top: 6px;
+	font-size: 9pt;
+}
+
+
+/* PROFILE -----------------------------------------------------------------*/
+.quote_box,
+.info_box {
+	padding: 10px;
+	width: 180px;
+	margin: 10px 0;
+	border-style: solid;
+	border-width: 1px;
+	border-color: gray;
+}

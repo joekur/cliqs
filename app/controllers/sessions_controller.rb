@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  layout 'front'
   
   # login page
   def new

@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   
+  has_many :cliq_memberships
+  has_many :cliqs, :through => :cliq_memberships
+  
+  
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   az_regex = /\A[a-z]*\z/i
   

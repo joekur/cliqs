@@ -1,0 +1,46 @@
+h3 {
+	display: inline;
+	position: relative;
+	top: -2px;
+}
+
+.front_container {
+	margin: auto;
+	margin-top: 25px;
+	width: 900px;
+	height: 228px;
+	border-radius: 10px;
+	border: solid 5px #dddddd;
+}
+
+.front_left {
+	float: left;
+	width: 530px;
+	margin: 10px;
+	margin-right: 0px;
+	padding: 25px;
+	padding-right: 33px;
+	border-right: solid 2px #dddddd;
+}
+
+.front_right {
+	float: right;
+	width: 230px;
+	margin: 10px;
+	margin-left: 0px;
+	padding: 25px;
+	text-align: center;
+}
+
+.front_right input {
+	margin: 10px;
+	padding: 5px;
+}
+
+.front_all {
+	padding: 25px;
+}
+
+.alignLeft {
+	text-align: left;
+}
