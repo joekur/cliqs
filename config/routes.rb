@@ -1,10 +1,12 @@
 Cliqs::Application.routes.draw do
-  get "sessions/new"
+  #get "sessions/new"
 
   get "pages/home"
 
   resources :users
   resources :sessions #, only: [:new, :create, :destroy]
+  resources :cliqs
+  resources :cliqmemberships
   
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'

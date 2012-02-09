@@ -1,0 +1,24 @@
+<% @title = "Create Cliq" %>
+
+<h1>Create new Cliq!</h1>
+
+<%= form_for(@cliq, :html => {:class => "form-stacked"} ) do |f| %>
+
+	<%= render :partial => 'shared/error_messages', :locals => { :model => @cliq } %>
+	
+	<div class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name, :class => 'xlarge' %>
+	</div>
+	
+	<div class="field">
+		<%= label_tag :invites, "Invites (optional)" %>
+		<%= text_area_tag :invites, nil,
+			:class => 'xlarge',
+			:size => '30x6',
+			:placeholder => 'Enter emails of your favorite people, separated by commas'	%>
+	</div>
+	
+	<%= f.submit "Create" %>
+
+<% end %>

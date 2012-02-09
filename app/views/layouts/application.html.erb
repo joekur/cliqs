@@ -5,19 +5,32 @@
     <title><%= title %></title>
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'nav', 'forms', 'jquery_form', 'cliqs_index', 'jquery-ui-1.8.16.custom.min' %>
   </head>
   
   <body>
-    <div class="container">
-		<% flash.each do |key, value| %>
-			<div class="flash <%= key %>"><%= value %></div>
-		<% end %>
-		
-		<%= yield %>
+  	
+  	<div id="topbar">
+		<%= render 'layouts/mainnav' %>
+	</div>
+  	
+    <div id="container">
+    	
+    	<%= render 'layouts/cliqnav' if defined?(@current_cliq) %>
+    	
+    	<div id="content">
+			<% flash.each do |key, value| %>
+				<div class="flash <%= key %>"><%= value %></div>
+			<% end %>
+			
+			<%= yield %>
+		</div>
       
-      <%= debug(params) if Rails.env.development? %>
+      	<%= debug(params) if Rails.env.development? %>
       
     </div>
+    
   </body>
   
 </html>

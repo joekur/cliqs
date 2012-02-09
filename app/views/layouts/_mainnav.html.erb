@@ -1,0 +1,37 @@
+<div id="nav">
+	
+	<ul class="mainnav">
+		
+		<% current_user.cliq_memberships.each do |cliq_mem| %>
+			<% 
+			cliq = cliq_mem.cliq
+			cliq_mem_id_str = 'cliqnav' + cliq_mem.id.to_s()
+			%>
+			<li id="<%= cliq_mem_id_str %>"
+			<% if(defined?(@current_cliq) && cliq.id == @current_cliq.id) %>
+				class="active"
+			<% end %>	
+			>
+			<%= link_to cliq.name, cliq %>
+			</li>
+			
+		<% end %>
+		
+	</ul>
+	
+	<div class="save_cliq_order_box">
+		<a href="#" id="save_cliq_order" action="/cliqMemberships/ajax_nav_rank">Save</a>
+	</div>
+	
+	<div class='float_right'>
+		<div id="mainSettingsLink">
+			<div id="mainSettingsDropdown">
+				<%= link_to "account", users_path %>
+				<%= link_to "new cliq", '/cliqs/new' %>
+				<a href="#" id="edit_cliq_order">sort cliqs</a>
+				<div class='dropdownSpacer'></div>
+				<%= link_to "logout", signout_path %>
+			</div>
+		</div>
+	</div>
+</div>

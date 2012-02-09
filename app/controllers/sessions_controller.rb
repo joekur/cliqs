@@ -1,8 +1,12 @@
 class SessionsController < ApplicationController
   layout 'front'
+  skip_before_filter :require_login, :only => [:new, :create]
   
   # login page
   def new
+    if signed_in?
+      redirect_to users_path
+    end
   end
   
   # login action
@@ -13,7 +17,7 @@ class SessionsController < ApplicationController
       render :new
     else
       sign_in user
-      redirect_to root_path #todo
+      redirect_to users_path
     end
   end
   

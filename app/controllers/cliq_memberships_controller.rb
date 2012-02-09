@@ -1,0 +1,2 @@
+class CliqMembershipsController < ApplicationController
+end

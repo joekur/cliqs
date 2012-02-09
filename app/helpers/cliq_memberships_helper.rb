@@ -1,0 +1,2 @@
+module CliqMembershipsHelper
+end
