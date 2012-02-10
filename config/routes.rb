@@ -2,6 +2,10 @@ Cliqs::Application.routes.draw do
   #get "sessions/new"
 
   get "pages/home"
+  get "users/useTicket"
+  get "users/acceptInvite"
+  
+  get "cliqMemberships/ajax_nav_rank"
 
   resources :users
   resources :sessions #, only: [:new, :create, :destroy]
@@ -13,7 +17,7 @@ Cliqs::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   
   root :to => 'sessions#new'
-  
+  match ':controller(/:action(/:id))'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

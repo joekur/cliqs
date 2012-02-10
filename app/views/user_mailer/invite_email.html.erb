@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <title>Invitation to Cliqs</title>
+  </head>
+  
+  <body>
+  	
+    <h1><b><%= @senderName %></b> has invited you to join the cliq: <b><%= @cliqName %></b> at cliqs.me</h1>
+    
+    <% if !@message.empty? %>
+   		<%= simple_format(@message) %>
+   		<br> - <%= @senderName %>
+  	<% end %>
+  	
+  	<p>Cliqs.me is a revolutionary social networking site that puts emphasis on 
+	privacy and close relationships. If you are not yet a member, you will have
+	the option to register by following the provided link.</p>
+	<p>Copy the link below into your browser to accept this invitation! Note that this
+	link will expire after 7 days.</p><br/>
+	
+	<%= @url %>
+  	
+  </body>
+  
+</html>

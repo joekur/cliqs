@@ -19,6 +19,29 @@ body {
 	display: inline-block;
 }
 
+.flash {
+	width: 100%;
+	padding: 10px 0;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+}
+.flash.success {
+	background: #aaff89;
+	border-color: #299100;
+	color: #299100;
+}
+.flash.error {
+	background: #ff765e;
+	border-color: #af2300;
+	color: #af2300;
+}
+.flash.notice {
+	background: #7ad2ff;
+	border-color: #013a9e;
+	color: #013a9e;
+}
+
 /* NAVIGATION MENU -----------------------------------------------------------------*/
 
 #topbar {

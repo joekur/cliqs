@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include RegexHelper
   
   # return a title on a per-page basis
   def title

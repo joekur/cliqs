@@ -34,4 +34,9 @@ Cliqs::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # added-joe to allow development email sending
+  #config.action_mailer.raise_delivery_errors = true
+  #config.action_mailer.perform_deliveries = true
+  #ActionMailer::Base.delivery_method = :sendmail
 end

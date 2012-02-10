@@ -2,7 +2,7 @@
 	
 	<ul class="mainnav">
 		
-		<% current_user.cliq_memberships.each do |cliq_mem| %>
+		<% current_user.cliq_memberships.order("nav_rank ASC").each do |cliq_mem| %>
 			<% 
 			cliq = cliq_mem.cliq
 			cliq_mem_id_str = 'cliqnav' + cliq_mem.id.to_s()

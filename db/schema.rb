@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120208025546) do
+ActiveRecord::Schema.define(:version => 20120209020744) do
 
   create_table "cliq_memberships", :force => true do |t|
     t.integer  "cliq_id"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20120208025546) do
 
   create_table "cliqs", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tickets", :force => true do |t|
+    t.string   "token"
+    t.string   "email"
+    t.integer  "cliq_id"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

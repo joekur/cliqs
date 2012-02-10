@@ -8,7 +8,6 @@ h3 {
 	margin: auto;
 	margin-top: 25px;
 	width: 900px;
-	height: 228px;
 	border-radius: 10px;
 	border: solid 5px #dddddd;
 }
@@ -16,6 +15,7 @@ h3 {
 .front_left {
 	float: left;
 	width: 530px;
+	height: 158px;
 	margin: 10px;
 	margin-right: 0px;
 	padding: 25px;
@@ -25,11 +25,16 @@ h3 {
 
 .front_right {
 	float: right;
+	height: 158px;
 	width: 230px;
 	margin: 10px;
 	margin-left: 0px;
 	padding: 25px;
 	text-align: center;
+}
+
+.clear {
+	clear: both;
 }
 
 .front_right input {

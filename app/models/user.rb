@@ -1,15 +1,12 @@
 class User < ActiveRecord::Base
+  include RegexHelper
   
   has_many :cliq_memberships, :dependent => :destroy
   has_many :cliqs, :through => :cliq_memberships
   
   
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  az_regex = /\A[a-z]*\z/i
-  
-  
   validates :email, :presence => true,
-                    :format => { :with => email_regex },
+                    :format => { :with => $email_regex },
                     :uniqueness => { :case_sensitive => false }
   
   validates :password,  :presence => true,
@@ -17,10 +14,10 @@ class User < ActiveRecord::Base
                         :length => { :within => 6..40 }
   
   validates :first_name,  :presence => true,
-                          :format => { :with => az_regex }
+                          :format => { :with => $az_regex }
   
   validates :last_name,  :presence => true,
-                         :format => { :with => az_regex }
+                         :format => { :with => $az_regex }
   
   
   before_save :encrypt_password, :only => :create

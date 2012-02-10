@@ -1,8 +1,13 @@
-<% @title = "Sign Up" %>
-		
-<h1>Create new account</h1>
 
-<%= form_for(@user, :html => {:class => "form-stacked"}) do |f| %>
+
+<h1 class="page_title">
+	You have been invited to the cliq: <%= @cliq.name %>
+</h1>
+
+
+<h2>New to Cliqs?</h2>
+<h3>Create an account now</h3>
+<%= form_for(@user, :url => '/users/acceptInvite', :html => {:class => "form-stacked"} ) do |f| %>
 	<%= render :partial => 'shared/error_messages', :locals => { :model => @user } %>
 	
 	<div class="field">
@@ -27,3 +32,18 @@
 	</div>
 	<%= f.submit "Sign up" %>
 <% end %>
+
+
+<h2>Already a member?</h2>
+<h3>Login now</h3>
+<%= form_for(:session, :url => '/users/acceptInvite', :html => {:class => "form-stacked"}) do |f| %>
+	<div class="field">
+	<%= f.text_field :email, :placeholder => 'email' %>
+	</div>
+	<div class="field">
+	<%= f.password_field :password, :placeholder => 'password' %>
+	</div>
+	<%= f.submit "Sign in" %>
+<% end %>
+
+<%= debug(params) if Rails.env.development? %>
