@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   
   has_many :cliq_memberships, :dependent => :destroy
   has_many :cliqs, :through => :cliq_memberships
+  has_many :posts
+  has_many :comments
   
   
   validates :email, :presence => true,

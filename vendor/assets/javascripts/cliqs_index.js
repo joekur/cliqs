@@ -22,9 +22,16 @@ $(document).ready(function() {
 	
 	newPostBtn.click( newPostClick );
 	
-	
-	
-	function jsonResponse_AddPost(data) {
+	newPostForm.bind("ajax:beforeSend", function(xhr, settings) {
+		console.log('starting');
+	});
+	newPostForm.bind("ajax:complete", function(event, data, status, xhr) {
+		data = $.parseJSON(data.responseText);
+		console.log(data.success);
+		console.log(data['success']);
+	});
+    
+	/*function jsonResponse_AddPost(data) {
 		console.log(data);
 		if (data.success) {
 			newPostContainer.hide();
@@ -37,9 +44,9 @@ $(document).ready(function() {
 			console.log('failure!');
 		}
 		
-	}	
+	}*/	
 	
-	newPostForm.submit( function() {
+	/*newPostForm.submit( function() {
 		if (!postBody.val()) { // if empty post, do nothing
 			return false;
 		}
@@ -55,7 +62,7 @@ $(document).ready(function() {
 		$(this).ajaxSubmit(options); // from jquery_form.js
 		
 		return false; // prevent normal submit
-	});
+	});*/
 	
 	
 	//
@@ -94,7 +101,7 @@ $(document).ready(function() {
 		}
 	}
 	
-	new_comment_forms.live(
+	/*new_comment_forms.live(
 		'submit', 
 		function() {
 			var submitTo = $(this).attr('action');
@@ -112,7 +119,7 @@ $(document).ready(function() {
 			
 			return false;
 		}
-	);
+	);*/
 	
 	
 	//

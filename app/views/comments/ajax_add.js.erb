@@ -1,0 +1,9 @@
+
+<% if @success %>
+	console.log('success!');
+	var postContainer = $('#post<%= @comment.post_id.to_s %>');
+	postContainer.children('.add_comment_container').hide().find('textarea').val('');
+	postContainer.children('.comments_container').append("<%= escape_javascript( render(:partial => 'shared/comment', :locals => { :comment => @comment }) ) %>");
+<% else %>
+	console.log('failure!');
+<% end %>

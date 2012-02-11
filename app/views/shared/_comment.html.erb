@@ -1,0 +1,9 @@
+<div class="comment_container">
+    <div class="comment_author">
+      <%= link_to comment.user.name, "/" %>
+    </div>
+    
+    <div class="comment_body"><%= simple_format(comment.body) %></div>
+    
+    <div class="comment_time"><%= comment.created_at %></div>
+</div>

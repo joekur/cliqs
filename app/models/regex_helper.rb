@@ -12,4 +12,8 @@ module RegexHelper
     /\A[a-z]*\z/i
   end
   
+  def alpha_num_regex
+    /\A[a-z0-9\._-]+\z/i
+  end
+  
 end

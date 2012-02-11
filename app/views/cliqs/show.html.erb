@@ -1,2 +1,29 @@
-<h1><%= @cliq.name %></h1>
-<%= debug @cliq %>
+<div id="left_sidebar">
+	<%= link_to "Invite new members", '/', :class => 'btn secondary' %>
+</div>
+
+<div id="cliq_index_content">
+	
+	<button type="button" class="btn primary" id="new_post_btn">New Post</button>
+	
+	<div id="new_post_container">
+		<%= form_for :post, :url => "/posts/ajax_add", :remote => true, :html => {:class => 'new_post_form'} do |f| %>
+			<div class="field">
+				<%= f.text_area :body, :class => 'xxlarge add_post_body', :rows => 8 %>
+			</div>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :cliq_id, :value => @current_cliq.id %>
+			<%= f.submit "Post", :class => 'btn primary' %>
+		<% end %>
+		
+	</div>
+	
+	<div id="post_wall">
+		
+		<% @posts.each do |post| %>
+			<%= render :partial => 'shared/post', :locals => { :post => post } %>
+		<% end %>
+		
+	</div><!-- end post_wall -->
+	
+</div><!-- end cliq_index_content -->

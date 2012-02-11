@@ -42,6 +42,11 @@ body {
 	color: #013a9e;
 }
 
+#footer {
+	clear:both;
+	height: 60px;
+}
+
 /* NAVIGATION MENU -----------------------------------------------------------------*/
 
 #topbar {
@@ -206,10 +211,11 @@ textarea {
 #left_sidebar {
 	float: left;
 	width: 200px;
-	height: 800px;
+	height: 500px;
 	border-right-width: 1px;
 	border-right-style: solid;
 	margin-right: 40px;
+	margin-bottom: 40px;
 }
 
 #cliq_index_content {
@@ -224,6 +230,7 @@ textarea {
 #new_post_container {
 	padding: 20px;
 	background: #cef1ff;
+	background: white;
 	display: none;
 }
 

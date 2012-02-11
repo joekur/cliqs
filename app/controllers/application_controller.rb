@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  include SessionsHelper
+  include SessionsHelper, ApplicationHelper
   
   before_filter :require_login
   

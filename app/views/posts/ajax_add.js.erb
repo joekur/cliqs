@@ -1,0 +1,13 @@
+var newPostContainer = $('#new_post_container');
+var postBody = $('textarea.add_post_body');
+var newPostBtn = $('#new_post_btn');
+
+<% if @success %>
+	console.log('success!');
+	newPostContainer.hide();
+	newPostBtn.text('New Post');
+	$('#post_wall').prepend("<%= escape_javascript( render(:partial => 'shared/post', :locals => { :post => @post }) ) %>");
+<% else %>
+	console.log('failure!');
+<% end %>
+	
