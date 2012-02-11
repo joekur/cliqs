@@ -28,4 +28,20 @@ module ApplicationHelper
     return str
   end
   
+  def post_profile(post) # works for either post or comment
+    cliq_id = post.cliq.id
+    post.user.profiles.where(:cliq_id => cliq_id).first
+  end
+  
+  def comment_profile(comment)
+    cliq_id = comment.post.cliq.id
+    comment.user.profiles.where(:cliq_id => cliq_id).first
+  end
+  
+  def nl2br(str)
+    str = h str
+    str = str.gsub("\n\r","<br>").gsub("\r", "").gsub("\n", "<br />")
+    str.html_safe
+  end
+  
 end

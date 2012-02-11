@@ -1,0 +1,23 @@
+<h1>Send invites</h1>
+
+<%= form_tag('/cliqs/create_invites/'+@current_cliq.id.to_s, :class => "form-stacked" ) do %>
+	
+	<div class="field">
+		<%= label_tag :invites, "Invites" %>
+		<%= text_area_tag :invites, @invites,
+			:class => 'xlarge',
+			:size => '30x6',
+			:placeholder => 'Enter emails of your favorite people, separated by commas'	%>
+	</div>
+	
+	<div class="field">
+		<%= label_tag :invite_message, "Invite message" %>
+		<%= text_area_tag :invite_message, @invite_message,
+			:class => 'xlarge',
+			:size => '30x6',
+			:placeholder => 'Add a customized message to your invite email'	%>
+	</div>
+	
+	<%= submit_tag "Create" %>
+
+<% end %>

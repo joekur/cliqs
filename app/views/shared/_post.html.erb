@@ -3,10 +3,10 @@
 	
 	<div class="post_container">
 	    <div class="post_author">
-	      <%= link_to author.name, "/" %>
+	      <%= link_to author.name, post_profile(post) %>
 	    </div>
 	    
-	    <div class="post_body"><%= simple_format(post.body) %></div>
+	    <div class="post_body"><%= nl2br(post.body) %></div>
 	    
 	    <div class="post_time"><%= post.created_at %></div>
 	    
@@ -32,10 +32,10 @@
 		<% post.comments.each do |comment| %>
 			<div class="comment_container">
 			    <div class="comment_author">
-			      <%= link_to comment.user.name, "/" %>
+			      <%= link_to comment.user.name, comment_profile(comment) %>
 			    </div>
 			    
-			    <div class="comment_body"><%= simple_format(comment.body) %></div>
+			    <div class="comment_body"><%= nl2br(comment.body) %></div>
 			    
 			    <div class="comment_time"><%= comment.created_at %></div>
 			</div>

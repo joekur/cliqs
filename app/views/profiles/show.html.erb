@@ -1,0 +1,22 @@
+<% @user = @profile.user %>
+
+<h1><%= @user.name %></h1>
+
+<% if current_user.id == @user.id %>
+	<%= link_to "Edit profile", edit_profile_path(@profile) %>
+<% end %>
+
+<div style="width:200px;height:250px;background:gray;"></div>
+
+<% if !@profile.quote.blank? %>
+	<div class="quote_box">
+		<p><%= @profile.quote %></p>
+	</div>
+<% end %>
+
+<% if !@profile.birthdate.blank? %>
+	<div class="info_box">
+		<b>Birthdate</b><br/>
+		<%= @profile.birthdate.strftime("%B %d, %Y") %>
+	</div>
+<% end %>

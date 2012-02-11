@@ -59,6 +59,7 @@ class UsersController < ApplicationController
         @user = User.new(params[:user])
         if @user.save
           @user.cliqs << @cliq
+          @user.profiles << Profile.new({:cliq_id => @cliq.id})
           sign_in @user
           redirect_to users_path, :flash => {:success => "Welcome to cliqs!"}
         end

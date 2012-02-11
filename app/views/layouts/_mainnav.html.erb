@@ -7,13 +7,15 @@
 			cliq = cliq_mem.cliq
 			cliq_mem_id_str = 'cliqnav' + cliq_mem.id.to_s()
 			%>
+			
 			<li id="<%= cliq_mem_id_str %>"
 			<% if(defined?(@current_cliq) && cliq.id == @current_cliq.id) %>
 				class="active"
 			<% end %>	
 			>
-			<%= link_to cliq.name, cliq %>
+				<%= link_to cliq.name, cliq %>
 			</li>
+			
 			
 		<% end %>
 		

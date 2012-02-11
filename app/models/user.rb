@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :cliqs, :through => :cliq_memberships
   has_many :posts
   has_many :comments
+  has_many :profiles
   
   
   validates :email, :presence => true,

@@ -14,10 +14,15 @@ Cliqs::Application.routes.draw do
   resources :sessions #, only: [:new, :create, :destroy]
   resources :cliqs
   resources :cliqmemberships
+  resources :profiles
   
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+  match '/account', :to => 'users#index'
+  
+  match "cliqs/new_invites/:id", :to => 'cliqs#new_invites'
+  match "cliqs/create_invites/:id", :to => 'cliqs#create_invites'
   
   root :to => 'sessions#new'
   match ':controller(/:action(/:id))'

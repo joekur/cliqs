@@ -16,6 +16,7 @@ class CliqsController < ApplicationController
     @cliq = Cliq.new(params[:cliq])
     if @cliq.save
       current_user.cliqs << @cliq
+      current_user.profiles << Profile.new({:cliq_id => @cliq.id});
       send_cliq_invites(params[:invites], params[:invite_message], @cliq, current_user)
       flash[:success] = "New cliq created!"
       redirect_to users_path
@@ -23,6 +24,17 @@ class CliqsController < ApplicationController
       @invites = params[:invites]; @invite_message = params[:invite_message]
       render :new
     end
+  end
+  
+  def new_invites
+    @current_cliq = Cliq.find(params[:id])
+  end
+  
+  def create_invites
+    @current_cliq = Cliq.find(params[:id])
+    send_cliq_invites(params[:invites], params[:invite_message], @current_cliq, current_user)
+    flash[:success] = "Invites sent!"
+    redirect_to @current_cliq
   end
   
   private
