@@ -7,6 +7,7 @@ Cliqs::Application.routes.draw do
   get "pages/home"
   get "users/useTicket"
   get "users/acceptInvite"
+  get "users/remove_new_user_box"
   
   get "cliqMemberships/ajax_nav_rank"
 

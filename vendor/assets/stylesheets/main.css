@@ -211,6 +211,35 @@ textarea {
 	margin: 20px 0;
 }
 
+/* TEMP BOX -----------------------------------------------------------------------*/
+.temp_box {
+	width: 96%;
+	padding: 2%;
+	border-style: solid;
+	border-width: 1px;
+	margin: 20px 0;
+	position: relative;
+}
+.temp_box a.ex {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 5px 10px;
+	color: black;
+}
+.temp_box a.ex:hover {
+	background-color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#new_user_box {
+	border-color: #ff5400;
+	background-color: #ffa860;
+	color: black;
+}
+
 /* CLIQ INDEX -----------------------------------------------------------------*/
 
 #left_sidebar {

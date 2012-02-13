@@ -81,4 +81,10 @@ class UsersController < ApplicationController
     end
   end
   
+  def remove_new_user_box
+    me = current_user
+    me.how_to_box = false
+    me.save
+  end
+  
 end
