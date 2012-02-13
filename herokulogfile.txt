@@ -40,7 +40,8 @@
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/helpers.rb:131:in `modules_for_helpers'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/helpers.rb:22:in `block in inherited'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/railties/routes_helpers.rb:7:in `block (2 levels) in with'
-2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_controller/railties/paths.rb:7:in `block (2 levels) in with'
+2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_controller/railties/paths.rb:7:in `block (2 levels) in 
+with'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/app/controllers/application_controller.rb:1:in `<top (required)>'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `block in require'
@@ -86,7 +87,8 @@
 2012-02-11T20:50:38+00:00 heroku[web.1]: State changed from crashed to created
 2012-02-11T20:50:38+00:00 heroku[web.1]: State changed from created to starting
 2012-02-11T20:50:44+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 11130`
-2012-02-11T20:50:46+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-11T20:50:46+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bun
+dle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
 2012-02-11T20:50:46+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
 2012-02-11T20:50:48+00:00 app[web.1]: => Call with -d to detach
 2012-02-11T20:50:48+00:00 app[web.1]: => Booting WEBrick
@@ -981,3 +983,62 @@
 2012-02-13T15:56:09+00:00 app[web.1]: cache: [GET /] miss
 2012-02-13T15:56:09+00:00 heroku[router]: GET morning-sunset-1671.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=229ms status=500 bytes=643
 2012-02-13T15:56:09+00:00 heroku[web.1]: Process exited with status 137
+2012-02-13T16:01:33+00:00 heroku[slugc]: Slug compilation started
+2012-02-13T16:01:51+00:00 heroku[api]: Release v11 created by joedoku@gmail.com
+2012-02-13T16:01:51+00:00 heroku[api]: Deploy a442dc3 by joedoku@gmail.com
+2012-02-13T16:01:51+00:00 heroku[web.1]: State changed from up to bouncing
+2012-02-13T16:01:51+00:00 heroku[web.1]: State changed from bouncing to created
+2012-02-13T16:01:51+00:00 heroku[web.1]: State changed from created to starting
+2012-02-13T16:01:52+00:00 heroku[slugc]: Slug compilation finished
+2012-02-13T16:01:56+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 43729`
+2012-02-13T16:02:00+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T16:02:00+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T16:02:01+00:00 heroku[web.1]: Stopping process with SIGTERM
+2012-02-13T16:02:01+00:00 app[web.1]: [2012-02-13 16:02:01] ERROR SignalException: SIGTERM
+2012-02-13T16:02:01+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-02-13T16:02:04+00:00 app[web.1]: [2012-02-13 16:02:04] INFO  WEBrick 1.3.1
+2012-02-13T16:02:04+00:00 app[web.1]: [2012-02-13 16:02:04] INFO  WEBrick::HTTPServer#start: pid=1 port=43729
+2012-02-13T16:02:04+00:00 app[web.1]: [2012-02-13 16:02:04] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2012-02-13T16:02:04+00:00 heroku[web.1]: State changed from starting to up
+2012-02-13T16:02:11+00:00 heroku[web.1]: Error R12 (Exit timeout) -> Process failed to exit within 10 seconds of SIGTERM
+2012-02-13T16:02:11+00:00 heroku[web.1]: Stopping process with SIGKILL
+2012-02-13T16:02:13+00:00 heroku[web.1]: Process exited with status 137
+2012-02-13T16:03:58+00:00 heroku[web.1]: State changed from up to bouncing
+2012-02-13T16:03:58+00:00 heroku[web.1]: State changed from bouncing to created
+2012-02-13T16:03:58+00:00 heroku[web.1]: State changed from created to starting
+2012-02-13T16:04:01+00:00 heroku[web.1]: Stopping process with SIGTERM
+2012-02-13T16:04:01+00:00 app[web.1]: [2012-02-13 16:04:01] ERROR SignalException: SIGTERM
+2012-02-13T16:04:01+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-02-13T16:04:03+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 53574`
+2012-02-13T16:04:05+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T16:04:05+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T16:04:08+00:00 app[web.1]: [2012-02-13 16:04:08] INFO  WEBrick 1.3.1
+2012-02-13T16:04:08+00:00 app[web.1]: [2012-02-13 16:04:08] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2012-02-13T16:04:08+00:00 app[web.1]: [2012-02-13 16:04:08] INFO  WEBrick::HTTPServer#start: pid=1 port=53574
+2012-02-13T16:04:09+00:00 heroku[web.1]: State changed from starting to up
+2012-02-13T16:04:10+00:00 app[web.1]: => Booting WEBrick
+2012-02-13T16:04:10+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:53574
+2012-02-13T16:04:10+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-02-13T16:04:10+00:00 app[web.1]: => Call with -d to detach
+2012-02-13T16:04:10+00:00 app[web.1]: 
+2012-02-13T16:04:10+00:00 app[web.1]: 
+2012-02-13T16:04:10+00:00 app[web.1]: Started GET "/" for 98.250.109.83 at 2012-02-13 16:04:10 +0000
+2012-02-13T16:04:11+00:00 app[web.1]: Processing by SessionsController#new as HTML
+2012-02-13T16:04:11+00:00 app[web.1]:   Rendered sessions/new.html.erb within layouts/front (8.9ms)
+2012-02-13T16:04:11+00:00 app[web.1]: Completed 500 Internal Server Error in 107ms
+2012-02-13T16:04:11+00:00 app[web.1]:   Rendered layouts/_stylesheets.html.erb (40.8ms)
+2012-02-13T16:04:11+00:00 app[web.1]: 
+2012-02-13T16:04:11+00:00 app[web.1]:     2: <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+2012-02-13T16:04:11+00:00 app[web.1]:     5: <%= stylesheet_link_tag 'main', :media => 'screen' %>
+2012-02-13T16:04:11+00:00 app[web.1]: ActionView::Template::Error (main.css isn't precompiled):
+2012-02-13T16:04:11+00:00 app[web.1]:     4: 
+2012-02-13T16:04:11+00:00 app[web.1]:     3: <![endif]-->
+2012-02-13T16:04:11+00:00 app[web.1]:   app/views/layouts/_stylesheets.html.erb:5:in `_app_views_layouts__stylesheets_html_erb___1260925130896006646_43855640'
+2012-02-13T16:04:11+00:00 app[web.1]:   app/views/layouts/front.html.erb:7:in `_app_views_layouts_front_html_erb___1815149909377737651_44346580'
+2012-02-13T16:04:11+00:00 app[web.1]: 
+2012-02-13T16:04:11+00:00 app[web.1]: cache: [GET /] miss
+2012-02-13T16:04:11+00:00 app[web.1]: 
+2012-02-13T16:04:11+00:00 heroku[router]: GET morning-sunset-1671.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=260ms status=500 bytes=643
+2012-02-13T16:04:12+00:00 heroku[web.1]: Error R12 (Exit timeout) -> Process failed to exit within 10 seconds of SIGTERM
+2012-02-13T16:04:12+00:00 heroku[web.1]: Stopping process with SIGKILL
+2012-02-13T16:04:15+00:00 heroku[web.1]: Process exited with status 137
