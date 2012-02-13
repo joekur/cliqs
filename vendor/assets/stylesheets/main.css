@@ -25,6 +25,7 @@ body {
 	border-style: solid;
 	border-width: 1px;
 	text-align: center;
+	margin-bottom: 20px;
 }
 .flash.success {
 	background: #aaff89;
@@ -204,6 +205,10 @@ img.home {
 
 textarea {
 	resize: vertical;
+}
+
+.field {
+	margin: 20px 0;
 }
 
 /* CLIQ INDEX -----------------------------------------------------------------*/

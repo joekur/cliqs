@@ -2,7 +2,11 @@ class UserMailer < ActionMailer::Base
   default :from => "invites@cliqs.me"
   
   def domain
-    "http://localhost:3000"
+    if Rails.env.production?
+      "http://cliqs.herokuapp.com"
+    else
+      "http://localhost:3000"
+    end
   end
   
   def invite_email(hashyToken, emailAdd, senderName, cliqName, message)
