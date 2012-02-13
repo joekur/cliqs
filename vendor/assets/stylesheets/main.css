@@ -48,6 +48,10 @@ body {
 	height: 60px;
 }
 
+.clear {
+	clear:both;
+}
+
 /* NAVIGATION MENU -----------------------------------------------------------------*/
 
 #topbar {
@@ -211,6 +215,16 @@ textarea {
 	margin: 20px 0;
 }
 
+select#profile_birthdate_2i {
+	width: 110px;
+}
+select#profile_birthdate_3i {
+	width: 60px;
+}
+select#profile_birthdate_1i {
+	width: 80px;
+}
+
 /* TEMP BOX -----------------------------------------------------------------------*/
 .temp_box {
 	width: 96%;
@@ -287,6 +301,18 @@ textarea {
 	position: relative;
 }
 
+.post_picture {
+	width: 90px;
+	height: 90px;
+	border: 1px solid black;
+	float: left;
+}
+
+.post_right {
+	float: left;
+	margin-left: 20px;
+}
+
 .post_author {
 	margin-bottom: 6px;
 }
@@ -302,15 +328,28 @@ textarea {
 }
 
 .post_body {
-	
+	color: #333;
 }
 
 .post_time {
 	margin-top: 8px;
 	font-size: 9pt;
+	color: #666;
 }
 
 /* COMMENTS -----------------------------------------------------------------*/
+
+.comment_picture {
+	width: 64px;
+	height: 64px;
+	border: 1px solid black;
+	float: left;
+}
+
+.comment_right {
+	float: left;
+	margin-left: 20px;
+}
 
 button.add_comment_btn {
 	position: absolute;
@@ -343,6 +382,7 @@ button.add_comment_btn:hover {
 
 .submit_comment_btn {
 	/*margin: 0 20px;*/
+	margin: 10px 10px 0 0;
 }
 
 .cancel_comment_btn {
@@ -351,7 +391,7 @@ button.add_comment_btn:hover {
 
 .comment_container {
 	width: 480px;
-	padding: 10px 20px 10px 40px;
+	padding: 10px 20px 10px 46px;
 	background: #ffda77;
 }
 .comment_container:nth-child(even) {
@@ -359,7 +399,7 @@ button.add_comment_btn:hover {
 }
 
 .comment_author {
-	margin-bottom: 6px;	
+	margin-bottom: 6px;
 }
 
 .comment_author a {
@@ -369,12 +409,13 @@ button.add_comment_btn:hover {
 }
 
 .comment_body {
-	
+	color: #333;
 }
 
 .comment_time {
 	margin-top: 6px;
 	font-size: 9pt;
+	color: #666;
 }
 
 
@@ -382,7 +423,7 @@ button.add_comment_btn:hover {
 .quote_box,
 .info_box {
 	padding: 10px;
-	width: 178px;
+	width: 180px;
 	margin: 10px 0;
 	border-style: solid;
 	border-width: 1px;
@@ -392,3 +433,11 @@ button.add_comment_btn:hover {
 .quote_box p {
 	margin-bottom: 0;
 }
+
+.profile_picture {
+	border: 1px solid black;
+	width: 200px;
+	height: 200px;
+}
+
+/* GRAVATAR -----------------------------------------------------------------*/

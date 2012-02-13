@@ -2,13 +2,21 @@
 <div class="post_super_container" id="post<%= post.id.to_s %>">
 	
 	<div class="post_container">
-	    <div class="post_author">
-	      <%= link_to author.name, post_profile(post) %>
-	    </div>
-	    
-	    <div class="post_body"><%= nl2br(post.body) %></div>
-	    
-	    <div class="post_time"><%= format_datetime(post.created_at) %></div>
+		
+		<div class="post_picture">
+			<%= link_to gravatar_for(author, 90), post_profile(post) %>
+		</div>
+		
+		<div class="post_right">
+		    <div class="post_author">
+		      <%= link_to author.name, post_profile(post) %>
+		    </div>
+		    
+		    <div class="post_body"><%= nl2br(post.body) %></div>
+		    
+		    <div class="post_time"><%= format_datetime(post.created_at) %></div>
+		</div>
+	    <div class="clear"></div>
 	    
 	    <button type="button" class="add_comment_btn">
 	      <%= image_tag "icons/comment_icon.png", :width => 25, :height => 25 %>
@@ -30,15 +38,7 @@
   
 	<div class="comments_container">
 		<% post.comments.each do |comment| %>
-			<div class="comment_container">
-			    <div class="comment_author">
-			      <%= link_to comment.user.name, comment_profile(comment) %>
-			    </div>
-			    
-			    <div class="comment_body"><%= nl2br(comment.body) %></div>
-			    
-			    <div class="comment_time"><%= format_datetime(comment.created_at) %></div>
-			</div>
+			<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
 		<% end %>
 	</div>
   
