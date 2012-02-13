@@ -10,7 +10,7 @@
 
 <% if !@profile.quote.blank? %>
 	<div class="quote_box">
-		<p><%= @profile.quote %></p>
+		<p><%= nl2br(@profile.quote) %></p>
 	</div>
 <% end %>
 

@@ -40,6 +40,11 @@ module ApplicationHelper
     comment.user.profiles.where(:cliq_id => cliq_id).first
   end
   
+  def profile(user)
+    cliq_id = @current_cliq.id
+    user.profiles.where(:cliq_id => cliq_id).first
+  end
+  
   def nl2br(str)
     str = h str
     str = str.gsub("\n\r","<br>").gsub("\r", "").gsub("\n", "<br />")

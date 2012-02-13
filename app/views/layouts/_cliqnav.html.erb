@@ -9,7 +9,7 @@
 			<%= link_to current_user.name, current_user.profiles.where(:cliq_id => @current_cliq.id).first %>
 		</li>
 		<li>
-			
+			<%= link_to "Members", '/cliqs/members/'+@current_cliq.id.to_s %>
 		</li>
 	</ul>
 </div>

@@ -37,6 +37,11 @@ class CliqsController < ApplicationController
     redirect_to @current_cliq
   end
   
+  def members
+    @current_cliq = Cliq.find(params[:id])
+    @members = @current_cliq.users
+  end
+  
   private
     
     def check_cliq_membership

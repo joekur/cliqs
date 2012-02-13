@@ -382,9 +382,13 @@ button.add_comment_btn:hover {
 .quote_box,
 .info_box {
 	padding: 10px;
-	width: 180px;
+	width: 178px;
 	margin: 10px 0;
 	border-style: solid;
 	border-width: 1px;
 	border-color: gray;
+}
+
+.quote_box p {
+	margin-bottom: 0;
 }
