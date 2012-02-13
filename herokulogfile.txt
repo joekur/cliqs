@@ -16,14 +16,14 @@
 2012-02-11T20:50:37+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:26727
 2012-02-11T20:50:37+00:00 app[web.1]: => Call with -d to detach
 2012-02-11T20:50:37+00:00 app[web.1]: => Ctrl-C to shutdown server
-2012-02-11T20:50:37+00:00 app[web.1]: Exiting
+2012-02-11T20:50:37+00
+:00 app[web.1]: Exiting
 2012-02-11T20:50:37+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require': /app/app/helpers/application_helper.rb:16: invalid multibyte char (US-ASCII) (SyntaxError)
 2012-02-11T20:50:37+00:00 app[web.1]: /app/app/helpers/application_helper.rb:16: invalid multibyte char (US-ASCII)
 2012-02-11T20:50:37+00:00 app[web.1]: /app/app/helpers/application_helper.rb:16: syntax error, unexpected $end, expecting keyword_end
 2012-02-11T20:50:37+00:00 app[web.1]: ...)*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/
 2012-02-11T20:50:37+00:00 app[web.1]: ...                               ^
-2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_s
-upport/dependencies.rb:251:in `block in require'
+2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `block in require'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:236:in `load_dependency'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:359:in `require_or_load'
@@ -41,8 +41,7 @@ upport/dependencies.rb:251:in `block in require'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/helpers.rb:131:in `modules_for_helpers'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/helpers.rb:22:in `block in inherited'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/railties/routes_helpers.rb:7:in `block (2 levels) in with'
-2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_controller/railties/paths.rb:7:in `block (2 levels) in 
-with'
+2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_controller/railties/paths.rb:7:in `block (2 levels) in with'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/app/controllers/application_controller.rb:1:in `<top (required)>'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
 2012-02-11T20:50:37+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `block in require'
@@ -148,8 +147,7 @@ with'
 2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/config.ru:1:in `<main>'
 2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `parse_file'
 2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/config.ru:1:in `new'
-2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/vendor/bundle/ru
-by/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `eval'
+2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `eval'
 2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.2.1/lib/rails/commands/server.rb:46:in `app'
 2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:200:in `app'
 2012-02-11T20:50:48+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.4.1/lib/rack/server.rb:301:in `wrapped_app'
@@ -287,8 +285,7 @@ by/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:40:in `eval'
 2012-02-11T21:15:31+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:236:in `load_dependency'
 2012-02-11T21:15:31+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `block in require'
 2012-02-11T21:15:31+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:359:in `require_or_load'
-2012-02-11T21:15:31+00:00 app[web.1]: 	fro
-m /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
+2012-02-11T21:15:31+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:251:in `require'
 2012-02-11T21:15:31+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:502:in `load_missing_constant'
 2012-02-11T21:15:31+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:192:in `block in const_missing'
 2012-02-11T21:15:31+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:190:in `each'
@@ -387,8 +384,7 @@ m /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/depe
 2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/inflector/methods.rb:228:in `constantize'
 2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/inflector/methods.rb:259:in `safe_constantize'
 2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/string/inflections.rb:66:in `safe_constantize'
-2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/ac
-tionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:152:in `_default_wrap_model'
+2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:152:in `_default_wrap_model'
 2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:169:in `_set_wrapper_defaults'
 2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:133:in `inherited'
 2012-02-11T21:15:42+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/railties/routes_helpers.rb:7:in `block (2 levels) in with'
@@ -864,3 +860,62 @@ tionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:152:in `_default_wr
 2012-02-13T15:34:24+00:00 heroku[web.1]: Error R12 (Exit timeout) -> Process failed to exit within 10 seconds of SIGTERM
 2012-02-13T15:34:24+00:00 heroku[web.1]: Stopping process with SIGKILL
 2012-02-13T15:34:26+00:00 heroku[web.1]: Process exited with status 137
+2012-02-13T15:39:23+00:00 heroku[slugc]: Slug compilation started
+2012-02-13T15:39:51+00:00 heroku[api]: Release v9 created by joedoku@gmail.com
+2012-02-13T15:39:51+00:00 heroku[api]: Deploy 2816960 by joedoku@gmail.com
+2012-02-13T15:39:51+00:00 heroku[web.1]: State changed from up to bouncing
+2012-02-13T15:39:51+00:00 heroku[web.1]: State changed from bouncing to created
+2012-02-13T15:39:52+00:00 heroku[web.1]: State changed from created to starting
+2012-02-13T15:39:52+00:00 heroku[slugc]: Slug compilation finished
+2012-02-13T15:39:59+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 33992`
+2012-02-13T15:40:00+00:00 heroku[web.1]: Stopping process with SIGTERM
+2012-02-13T15:40:00+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-02-13T15:40:00+00:00 app[web.1]: [2012-02-13 15:40:00] ERROR SignalException: SIGTERM
+2012-02-13T15:40:10+00:00 heroku[web.1]: Error R12 (Exit timeout) -> Process failed to exit within 10 seconds of SIGTERM
+2012-02-13T15:40:10+00:00 heroku[web.1]: Stopping process with SIGKILL
+2012-02-13T15:40:10+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T15:40:10+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T15:40:12+00:00 heroku[web.1]: Process exited with status 137
+2012-02-13T15:40:21+00:00 app[web.1]: [2012-02-13 15:40:21] INFO  WEBrick 1.3.1
+2012-02-13T15:40:21+00:00 app[web.1]: [2012-02-13 15:40:21] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2012-02-13T15:40:21+00:00 app[web.1]: [2012-02-13 15:40:21] INFO  WEBrick::HTTPServer#start: pid=1 port=33992
+2012-02-13T15:40:26+00:00 heroku[web.1]: State changed from starting to up
+2012-02-13T15:40:32+00:00 heroku[web.1]: State changed from up to bouncing
+2012-02-13T15:40:32+00:00 heroku[web.1]: State changed from bouncing to created
+2012-02-13T15:40:32+00:00 heroku[web.1]: State changed from created to starting
+2012-02-13T15:40:38+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 35772`
+2012-02-13T15:40:41+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T15:40:41+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/01/04/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2012-02-13T15:40:44+00:00 heroku[web.1]: Stopping process with SIGTERM
+2012-02-13T15:40:44+00:00 app[web.1]: [2012-02-13 15:40:44] ERROR SignalException: SIGTERM
+2012-02-13T15:40:44+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2012-02-13T15:40:45+00:00 app[web.1]: [2012-02-13 15:40:45] INFO  WEBrick 1.3.1
+2012-02-13T15:40:45+00:00 app[web.1]: [2012-02-13 15:40:45] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2012-02-13T15:40:45+00:00 app[web.1]: [2012-02-13 15:40:45] INFO  WEBrick::HTTPServer#start: pid=1 port=35772
+2012-02-13T15:40:47+00:00 heroku[web.1]: State changed from starting to up
+2012-02-13T15:40:48+00:00 app[web.1]: => Booting WEBrick
+2012-02-13T15:40:48+00:00 app[web.1]: => Call with -d to detach
+2012-02-13T15:40:48+00:00 app[web.1]: => Rails 3.2.1 application starting in production on http://0.0.0.0:35772
+2012-02-13T15:40:48+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-02-13T15:40:48+00:00 app[web.1]: 
+2012-02-13T15:40:48+00:00 app[web.1]: 
+2012-02-13T15:40:48+00:00 app[web.1]: Started GET "/" for 98.250.109.83 at 2012-02-13 15:40:48 +0000
+2012-02-13T15:40:49+00:00 app[web.1]: Processing by SessionsController#new as HTML
+2012-02-13T15:40:49+00:00 app[web.1]:   Rendered sessions/new.html.erb within layouts/front (10.5ms)
+2012-02-13T15:40:49+00:00 app[web.1]:   Rendered layouts/_stylesheets.html.erb (42.1ms)
+2012-02-13T15:40:49+00:00 app[web.1]: Completed 500 Internal Server Error in 131ms
+2012-02-13T15:40:49+00:00 app[web.1]: 
+2012-02-13T15:40:49+00:00 app[web.1]:     4: 
+2012-02-13T15:40:49+00:00 app[web.1]:     5: 
+2012-02-13T15:40:49+00:00 app[web.1]: ActionView::Template::Error (main.css isn't precompiled):
+2012-02-13T15:40:49+00:00 app[web.1]:   app/views/layouts/_stylesheets.html.erb:6:in `_app_views_layouts__stylesheets_html_erb__4244620559910406656_40235700'
+2012-02-13T15:40:49+00:00 app[web.1]:   app/views/layouts/front.html.erb:7:in `_app_views_layouts_front_html_erb___2771393920036526408_40721060'
+2012-02-13T15:40:49+00:00 app[web.1]:     3: <![endif]-->
+2012-02-13T15:40:49+00:00 app[web.1]:     6: <%= stylesheet_link_tag 'main', :media => 'screen' %>
+2012-02-13T15:40:49+00:00 app[web.1]: 
+2012-02-13T15:40:49+00:00 app[web.1]: 
+2012-02-13T15:40:49+00:00 app[web.1]: cache: [GET /] miss
+2012-02-13T15:40:54+00:00 heroku[web.1]: Error R12 (Exit timeout) -> Process failed to exit within 10 seconds of SIGTERM
+2012-02-13T15:40:54+00:00 heroku[web.1]: Stopping process with SIGKILL
+2012-02-13T15:40:56+00:00 heroku[web.1]: Process exited with status 137
+2012-02-13T15:40:49+00:00 heroku[router]: GET morning-sunset-1671.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=285ms status=500 bytes=643
