@@ -8,7 +8,7 @@
 	    
 	    <div class="post_body"><%= nl2br(post.body) %></div>
 	    
-	    <div class="post_time"><%= post.created_at %></div>
+	    <div class="post_time"><%= format_datetime(post.created_at) %></div>
 	    
 	    <button type="button" class="add_comment_btn">
 	      <%= image_tag "icons/comment_icon.png", :width => 25, :height => 25 %>
@@ -37,7 +37,7 @@
 			    
 			    <div class="comment_body"><%= nl2br(comment.body) %></div>
 			    
-			    <div class="comment_time"><%= comment.created_at %></div>
+			    <div class="comment_time"><%= format_datetime(comment.created_at) %></div>
 			</div>
 		<% end %>
 	</div>

@@ -51,4 +51,25 @@ module ApplicationHelper
     str.html_safe
   end
   
+  def format_datetime(time)
+    now = Time.now
+    diff = now - time
+    if diff < 1.minute
+      "#{diff.round} seconds ago"
+    elsif diff < 1.hour
+      minutes = diff/60.0
+      "#{minutes.round} minutes ago"
+    elsif diff < 1.day
+      hours = diff/60.0/60.0
+      "#{hours.round} hours ago"
+    elsif diff < 10.days
+      days = diff/60.0/60.0/24.0
+      "#{days.round} days ago"
+    elsif now.year == time.year
+      time.strftime("%B %d")
+    else
+      time.strftime("%B %d, %Y")
+    end
+  end
+  
 end
