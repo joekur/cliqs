@@ -55,16 +55,16 @@ module ApplicationHelper
     now = Time.now
     diff = now - time
     if diff < 1.minute
-      "#{diff.round} seconds ago"
+      "#{pluralize(diff.round, 'second')} ago"
     elsif diff < 1.hour
       minutes = diff/60.0
-      "#{minutes.round} minutes ago"
+      "#{pluralize(minutes.round, 'minute')} ago"
     elsif diff < 1.day
       hours = diff/60.0/60.0
-      "#{hours.round} hours ago"
+      "#{pluralize(hours.round, 'hour')} ago"
     elsif diff < 10.days
       days = diff/60.0/60.0/24.0
-      "#{days.round} days ago"
+      "#{pluralize(days.round, 'day')} ago"
     elsif now.year == time.year
       time.strftime("%B %d")
     else

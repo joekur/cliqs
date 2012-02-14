@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
   private
   
     def require_login
-      deny_access unless signed_in?
+      unless signed_in?
+        store_location
+        deny_access
+      end
     end
   
 end
