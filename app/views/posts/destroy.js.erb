@@ -1,0 +1,4 @@
+
+<% if @success %>
+	$('#post<%= @post.id %>').fadeOut(800, function() { $(this).remove() });
+<% end %>
