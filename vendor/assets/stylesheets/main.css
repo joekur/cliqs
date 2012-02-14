@@ -52,6 +52,20 @@ body {
 	clear:both;
 }
 
+a.ex {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 5px 10px;
+	color: black;
+}
+a.ex:hover {
+	background-color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	text-decoration: none;
+}
+
 /* NAVIGATION MENU -----------------------------------------------------------------*/
 
 #topbar {
@@ -234,19 +248,7 @@ select#profile_birthdate_1i {
 	margin: 20px 0;
 	position: relative;
 }
-.temp_box a.ex {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	padding: 5px 10px;
-	color: black;
-}
-.temp_box a.ex:hover {
-	background-color: white;
-	opacity: 0.5;
-	cursor: pointer;
-	text-decoration: none;
-}
+
 
 #new_user_box {
 	border-color: #ff5400;

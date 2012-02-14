@@ -16,6 +16,7 @@ Cliqs::Application.routes.draw do
   resources :cliqs
   resources :cliqmemberships
   resources :profiles
+  resources :posts
   
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
