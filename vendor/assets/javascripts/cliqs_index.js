@@ -12,8 +12,10 @@ $(document).ready(function() {
 	function newPostClick() {		
 		if (newPostBtn.text() == 'New Post') {
 			newPostBtn.text('Discard');
+			newPostBtn.removeClass('primary').addClass('red');
 		} else {
 			newPostBtn.text('New Post');
+			newPostBtn.removeClass('red').addClass('primary');
 		}
 		
 		newPostContainer.toggle();
