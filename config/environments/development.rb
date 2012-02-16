@@ -35,9 +35,17 @@ Cliqs::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  # added-joe to allow development email sending
-  #config.action_mailer.raise_delivery_errors = true
-  #config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
-  #ActionMailer::Base.delivery_method = :sendmail
+  
+  CarrierWave.configure do |wave|
+    wave.storage = :fog
+    wave.fog_directory  = 'cliqs_development'
+    
+    wave.fog_credentials = {
+      :provider               => 'AWS',
+      :aws_access_key_id      => 'AKIAIO674FQRSZABDCEQ',
+      :aws_secret_access_key  => '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',
+    }
+  end
+  
 end
