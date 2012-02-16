@@ -39,7 +39,8 @@ Cliqs::Application.configure do
   
   CarrierWave.configure do |wave|
     wave.storage = :fog
-    wave.fog_directory  = 'cliqs_development'
+    wave.fog_directory  = 'cliqs-development'
+    wave.delete_tmp_file_after_storage = false
     
     wave.fog_credentials = {
       :provider               => 'AWS',
