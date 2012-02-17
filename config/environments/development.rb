@@ -38,15 +38,8 @@ Cliqs::Application.configure do
   config.action_mailer.delivery_method = :smtp
   
   CarrierWave.configure do |wave|
-    wave.storage = :fog
-    wave.fog_directory  = 'cliqs-development'
-    wave.delete_tmp_file_after_storage = false
-    
-    wave.fog_credentials = {
-      :provider               => 'AWS',
-      :aws_access_key_id      => 'AKIAIO674FQRSZABDCEQ',
-      :aws_secret_access_key  => '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',
-    }
+    wave.storage = :file
+    config.permissions = 0777
   end
   
 end
