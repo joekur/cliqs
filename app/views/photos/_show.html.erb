@@ -1,0 +1,26 @@
+<% author = photo.user %>
+
+<div class="post_super_container" id="photo<%= photo.id.to_s %>">
+	
+	<div class="post_container">
+		
+		<div class="post_picture">
+			<%= link_to gravatar_for(author, 90), post_profile(photo) %>
+		</div>
+		
+		<div class="post_right">
+		    <%= link_to author.name, post_profile(photo), :class => 'post_author' %> posted a photo
+		    
+		    <div class="photo_image_container">
+		    	<%= image_tag photo.image_url(:wall), :class => 'photo_image' if photo.image? %>	
+		    </div>
+		    
+		    <div class="post_body"><%= nl2br(photo.body) %></div>
+		    
+		    <div class="post_time"><%= format_datetime(photo.created_at) %></div>
+		</div>
+	    <div class="clear"></div>
+		
+	</div>
+	
+</div>

@@ -269,6 +269,10 @@ select#profile_birthdate_1i {
 	margin-bottom: 40px;
 }
 
+#left_sidebar a{
+	margin-bottom: 10px;
+}
+
 #cliq_index_content {
 	float: left;
 	width: 710px;
@@ -294,6 +298,16 @@ select#profile_birthdate_1i {
 	margin: 20px 0;
 }
 
+/* PHOTOS ----------------------------------------------------------------*/
+
+.photo_image_container {
+	margin-top: 6px;
+	width: 100%;
+}
+
+img.photo_image {
+}
+
 /* POSTS -----------------------------------------------------------------*/
 
 .post_container {
@@ -314,24 +328,23 @@ select#profile_birthdate_1i {
 .post_right {
 	float: left;
 	margin-left: 20px;
+	width: 386px;
 }
 
-.post_author {
-	margin-bottom: 6px;
-}
-
-.post_author a {
+a.post_author {
 	font-weight: bold;
 	font-size: 12pt;
 	text-decoration: none;
+	margin-right: 3px;
 }
-.post_author a:hover,
-.comment_author a:hover {
+a.post_author:hover,
+a.comment_author:hover {
 	text-decoration: none;
 }
 
 .post_body {
 	color: #333;
+	margin-top: 6px;
 }
 
 .post_time {

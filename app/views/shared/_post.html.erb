@@ -12,9 +12,7 @@
 		</div>
 		
 		<div class="post_right">
-		    <div class="post_author">
-		      <%= link_to author.name, post_profile(post) %>
-		    </div>
+		    <%= link_to author.name, post_profile(post), :class => 'post_author' %>
 		    
 		    <div class="post_body"><%= nl2br(post.body) %></div>
 		    
