@@ -12,3 +12,14 @@ $('[placeholder]').focus(function() {
     input.val(input.attr('placeholder'));
   }
 }).blur();
+
+$(document).ready(function() {
+	
+	$('form.loading').submit(function() {
+		$(this).children('img.loading').show();
+		$(this).children('input:last').remove();
+		return true;
+	});
+	
+});
+

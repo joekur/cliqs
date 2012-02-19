@@ -67,6 +67,12 @@ a.ex:hover {
 	text-decoration: none;
 }
 
+img.loading {
+	width: 30px; height: 30px;
+	margin-bottom: -9px;
+	display: none;
+}
+
 /* NAVIGATION MENU -----------------------------------------------------------------*/
 
 #topbar {
@@ -315,9 +321,9 @@ textarea.add_post_body {
 	padding: 7px;
 	border: solid 1px black;
 	display: inline-block;
-	-webkit-border-radius: 5px;
+	/*-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border-radius: 5px;*/
 }
 
 img.photo_image {
@@ -494,13 +500,13 @@ button.add_comment_btn:hover {
 .member_link_container {
 	display: inline-block;
 	margin: 20px 20px 0 0;
-	padding: 5px 2px 5px 5px;
+	padding: 5px;
 	border: solid 1px black;
 	font-size: 9pt;
 	text-align: center;
-	-webkit-border-radius: 5px;
+	/*-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border-radius: 5px;*/
 }
 .member_link_conatiner a {
 	display: block;

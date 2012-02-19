@@ -1,4 +1,7 @@
 
 <% if @success %>
-	$('#photo<%= @photo.id %>').fadeOut(800, function() { $(this).remove() });
+	$('#photo<%= @photo.id %>').fadeOut(800, function() { 
+		$(this).remove();
+		$('#photo_stream<%= @photo.id %>').remove();
+	});
 <% end %>

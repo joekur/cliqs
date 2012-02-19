@@ -37,7 +37,7 @@
 	
 	<% @photos.each do |photo| %>
 		<div class="photo_stream_container">
-			<%= image_tag photo.image_url(:square), :class => 'photo_stream' if photo.image? %>
+			<%= image_tag photo.image_url(:square), :class => 'photo_stream', :id => 'photo_stream'+photo.id.to_s if photo.image? %>
 		</div>
 	<% end %>
 </div>
