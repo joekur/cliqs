@@ -1,24 +1,30 @@
---- 
-blueprint/src/grid.png: blueprint/src/grid-110aed0743c4500f27aff14e1c329a4b.png
-blueprint/plugins/buttons/icons/key.png: blueprint/plugins/buttons/icons/key-8e3f74ccdd824651d925f0d4ae82b542.png
-icons/comment_icon.png: icons/comment_icon-bbcb744d565a9c67e0acdedd2346e1f8.png
-blueprint/plugins/link-icons/icons/doc.png: blueprint/plugins/link-icons/icons/doc-e7bde22a5e5d85598e3484a0b8ec263a.png
-blueprint/plugins/rtl/readme.txt: blueprint/plugins/rtl/readme-7be0069420127776e886d6b5d772b335.txt
-blueprint/plugins/link-icons/icons/feed.png: blueprint/plugins/link-icons/icons/feed-22c8117efb421af196c543effd1e2f99.png
-blueprint/plugins/fancy-type/readme.txt: blueprint/plugins/fancy-type/readme-4eaca1f660426010b36de02400b3f11d.txt
-blueprint/plugins/buttons/icons/cross.png: blueprint/plugins/buttons/icons/cross-c7cecbf2f882d83d76089292bd4b0ddf.png
-icons/home.png: icons/home-78e67f179229bbda6116c1bc827c9db8.png
-blueprint/plugins/link-icons/icons/email.png: blueprint/plugins/link-icons/icons/email-ed79a6df0cf02d7ecb08f07c6921d2e0.png
-blueprint/plugins/link-icons/readme.txt: blueprint/plugins/link-icons/readme-f8cbb598e8b9cf4b9f039563db0e9abe.txt
-blueprint/plugins/link-icons/icons/lock.png: blueprint/plugins/link-icons/icons/lock-9c22ca62c20e5f8d84d923e2f1a28a6a.png
-blueprint/plugins/link-icons/icons/im.png: blueprint/plugins/link-icons/icons/im-a2728f1f026a912ac8e9231160fc85d0.png
-blueprint/plugins/link-icons/icons/external.png: blueprint/plugins/link-icons/icons/external-8aa50a72751d10747941ba0c936187ef.png
-rails.png: rails-782b548cc1ba7f898cdad2d9eb8420d2.png
-blueprint/plugins/link-icons/icons/pdf.png: blueprint/plugins/link-icons/icons/pdf-46ee489efeca8462ee45dcf072569b30.png
-application.css: application-95bd4fe1de99c1cd91ec8e6f348a44bd.css
-blueprint/plugins/link-icons/icons/xls.png: blueprint/plugins/link-icons/icons/xls-6dfc918c29ebc75a10085ba858965ac1.png
-logo.png: logo-4dec04ce8b5c15014432b5658fbb2f50.png
-blueprint/plugins/buttons/readme.txt: blueprint/plugins/buttons/readme-10b29df234bc7e9ce187ef0d962e0657.txt
-application.js: application-f96046edfe799aee41e5ed90ec1f8661.js
-blueprint/plugins/link-icons/icons/visited.png: blueprint/plugins/link-icons/icons/visited-89a77d7330a57b48d4c31836e31d859f.png
-blueprint/plugins/buttons/icons/tick.png: blueprint/plugins/buttons/icons/tick-64f108801155bd6b82a5471d038f25ea.png
+---
+!binary "aWNvbnMvY29tbWVudF9pY29uLnBuZw==": icons/comment_icon-d0ac2ce40fbcca6bdee833a69b732995.png
+!binary "aWNvbnMvaG9tZS5wbmc=": icons/home-78e67f179229bbda6116c1bc827c9db8.png
+!binary "bG9nby5wbmc=": logo-4dec04ce8b5c15014432b5658fbb2f50.png
+!binary "cmFpbHMucG5n": rails-782b548cc1ba7f898cdad2d9eb8420d2.png
+!binary "YXBwbGljYXRpb24uanM=": application-f7cf14920e55d0fb5cc882de14e7cc77.js
+!binary "YXBwbGljYXRpb24uY3Nz": application-684ded5be2b4f3334e21056b2bc10c82.css
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvYnV0dG9ucy9pY29ucy9jcm9zcy5wbmc=": blueprint/plugins/buttons/icons/cross-c7cecbf2f882d83d76089292bd4b0ddf.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvYnV0dG9ucy9pY29ucy9rZXkucG5n": blueprint/plugins/buttons/icons/key-8e3f74ccdd824651d925f0d4ae82b542.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvYnV0dG9ucy9pY29ucy90aWNrLnBuZw==": blueprint/plugins/buttons/icons/tick-64f108801155bd6b82a5471d038f25ea.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvYnV0dG9ucy9yZWFkbWUudHh0": blueprint/plugins/buttons/readme-10b29df234bc7e9ce187ef0d962e0657.txt
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvZmFuY3ktdHlwZS9yZWFkbWUudHh0": blueprint/plugins/fancy-type/readme-4eaca1f660426010b36de02400b3f11d.txt
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy9kb2MucG5n": blueprint/plugins/link-icons/icons/doc-e7bde22a5e5d85598e3484a0b8ec263a.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy9lbWFpbC5wbmc=": blueprint/plugins/link-icons/icons/email-ed79a6df0cf02d7ecb08f07c6921d2e0.png
+? !binary |-
+  Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy9leHRlcm5hbC5w
+  bmc=
+: blueprint/plugins/link-icons/icons/external-8aa50a72751d10747941ba0c936187ef.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy9mZWVkLnBuZw==": blueprint/plugins/link-icons/icons/feed-22c8117efb421af196c543effd1e2f99.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy9pbS5wbmc=": blueprint/plugins/link-icons/icons/im-a2728f1f026a912ac8e9231160fc85d0.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy9sb2NrLnBuZw==": blueprint/plugins/link-icons/icons/lock-9c22ca62c20e5f8d84d923e2f1a28a6a.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy9wZGYucG5n": blueprint/plugins/link-icons/icons/pdf-46ee489efeca8462ee45dcf072569b30.png
+? !binary |-
+  Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy92aXNpdGVkLnBu
+  Zw==
+: blueprint/plugins/link-icons/icons/visited-89a77d7330a57b48d4c31836e31d859f.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9pY29ucy94bHMucG5n": blueprint/plugins/link-icons/icons/xls-6dfc918c29ebc75a10085ba858965ac1.png
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvbGluay1pY29ucy9yZWFkbWUudHh0": blueprint/plugins/link-icons/readme-f8cbb598e8b9cf4b9f039563db0e9abe.txt
+!binary "Ymx1ZXByaW50L3BsdWdpbnMvcnRsL3JlYWRtZS50eHQ=": blueprint/plugins/rtl/readme-7be0069420127776e886d6b5d772b335.txt
+!binary "Ymx1ZXByaW50L3NyYy9ncmlkLnBuZw==": blueprint/src/grid-110aed0743c4500f27aff14e1c329a4b.png

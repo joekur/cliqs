@@ -1,6 +1,5 @@
 <div id="left_sidebar">
 	<%= link_to "Invite new members", '/cliqs/new_invites/'+@current_cliq.id.to_s, :class => 'btn secondary' %>
-	<%= link_to "New photo", new_cliq_photo_path(@current_cliq), :class => 'btn secondary' %>
 </div>
 
 <div id="cliq_index_content">
@@ -32,3 +31,13 @@
 	</div><!-- end post_wall -->
 	
 </div><!-- end cliq_index_content -->
+
+<div id="right_sidebar">
+	<%= link_to "New photo", new_cliq_photo_path(@current_cliq), :class => 'btn secondary' %>
+	
+	<% @photos.each do |photo| %>
+		<div class="photo_stream_container">
+			<%= image_tag photo.image_url(:square), :class => 'photo_stream' if photo.image? %>
+		</div>
+	<% end %>
+</div>
