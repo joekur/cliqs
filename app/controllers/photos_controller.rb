@@ -19,4 +19,14 @@ class PhotosController < ApplicationController
      end
   end
   
+  def destroy
+    @photo = Photo.find(params[:id])
+    @success = false
+    if @photo.user.id == current_user.id
+      if @photo.destroy
+        @success = true
+      end
+    end
+  end
+  
 end

@@ -1,0 +1,4 @@
+
+<% if @success %>
+	$('#photo<%= @photo.id %>').fadeOut(800, function() { $(this).remove() });
+<% end %>

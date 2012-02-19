@@ -21,7 +21,7 @@
 	<div id="post_wall">
 		
 		<% @photos.each do |photo| %>
-			<%= render :partial => 'photos/show', :locals => { :photo => photo } %>
+			<%= render :partial => 'photos/photo', :locals => { :photo => photo } %>
 		<% end %>
 		
 		<% @posts.each do |post| %>

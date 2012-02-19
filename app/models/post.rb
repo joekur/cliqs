@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :cliq
-  has_many :comments, :dependent => :destroy
+  has_many :comments, :as => :commentable, :dependent => :destroy
   
   validates :body, :presence => true
   validates :user_id, :presence => true

@@ -36,7 +36,7 @@ module ApplicationHelper
   end
   
   def comment_profile(comment)
-    cliq_id = comment.post.cliq.id
+    cliq_id = comment.commentable.cliq.id
     comment.user.profiles.where(:cliq_id => cliq_id).first
   end
   
