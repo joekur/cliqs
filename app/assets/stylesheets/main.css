@@ -27,19 +27,22 @@ body {
 	border-width: 1px;
 	text-align: center;
 	margin-bottom: 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 .flash.success {
-	background: #aaff89;
+	background: #f1fdf1;
 	border-color: #299100;
 	color: #299100;
 }
 .flash.error {
-	background: #ff765e;
+	background: #ffc6b2;
 	border-color: #af2300;
 	color: #af2300;
 }
 .flash.notice {
-	background: #7ad2ff;
+	background: #d3f3ff;
 	border-color: #013a9e;
 	color: #013a9e;
 }

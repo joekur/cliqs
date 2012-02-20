@@ -10,4 +10,12 @@ class Photo < ActiveRecord::Base
   
   validates :image, :presence => true
   
+  def latest_activity
+    times = [self.created_at]
+    self.comments.each do |comment|
+      times.push(comment.created_at)
+    end
+    times.max
+  end
+  
 end
