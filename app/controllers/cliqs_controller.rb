@@ -6,6 +6,8 @@ class CliqsController < ApplicationController
     @cliq = Cliq.find(params[:id])
     @current_cliq = @cliq
     @posts = @current_cliq.posts.order("created_at DESC")
+    @photos = @current_cliq.photos.order("created_at DESC")
+    @stories = Cliq.order_stories(@posts, @photos)
   end
 
   def new

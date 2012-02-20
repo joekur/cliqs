@@ -66,4 +66,17 @@ Cliqs::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
   config.action_mailer.delivery_method = :smtp
+  
+  CarrierWave.configure do |wave|
+    wave.storage = :fog
+    wave.fog_directory  = 'cliqs-production'
+    
+    wave.fog_credentials = {
+      :provider               => 'AWS',
+      :aws_access_key_id      => 'AKIAIO674FQRSZABDCEQ',
+      :aws_secret_access_key  => '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',
+    }
+  end
+  
+  
 end

@@ -20,10 +20,21 @@
 	
 	<div id="post_wall">
 		
-		<% @posts.each do |post| %>
-			<%= render :partial => 'shared/post', :locals => { :post => post } %>
+		<% @stories.each do |story| %>
+			<%= render :partial => 'photos/photo', :locals => { :photo => story } if story.class.name=="Photo" %>
+			<%= render :partial => 'shared/post', :locals => { :post => story } if story.class.name=="Post" %>
 		<% end %>
 		
 	</div><!-- end post_wall -->
 	
 </div><!-- end cliq_index_content -->
+
+<div id="right_sidebar">
+	<%= link_to "New photo", new_cliq_photo_path(@current_cliq), :class => 'btn secondary' %>
+	
+	<% @photos.each do |photo| %>
+		<div class="photo_stream_container">
+			<%= image_tag photo.image_url(:square), :class => 'photo_stream', :id => 'photo_stream'+photo.id.to_s if photo.image? %>
+		</div>
+	<% end %>
+</div>

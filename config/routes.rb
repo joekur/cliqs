@@ -13,7 +13,9 @@ Cliqs::Application.routes.draw do
 
   resources :users
   resources :sessions #, only: [:new, :create, :destroy]
-  resources :cliqs
+  resources :cliqs do
+    resources :photos
+  end
   resources :cliqmemberships
   resources :profiles
   resources :posts

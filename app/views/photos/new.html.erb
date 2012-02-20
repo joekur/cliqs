@@ -1,0 +1,17 @@
+<h3>Add photo</h3>
+
+<%= form_for [@current_cliq, @photo], :html => {:multipart => true, :class => 'form-stacked loading'} do |f| %>
+	<%= render :partial => '/shared/error_messages', :locals => {:model => @photo} %>
+	
+	<div class="field">
+		<%= f.file_field :image %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :body, "Description" %>
+		<%= f.text_area :body, :rows => 5 %>
+	</div>
+	
+	<%= f.submit "Save", :class => "btn secondary" %>
+	<%= image_tag "loading.gif", :class => "loading" %>
+<% end %>

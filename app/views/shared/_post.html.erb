@@ -12,9 +12,7 @@
 		</div>
 		
 		<div class="post_right">
-		    <div class="post_author">
-		      <%= link_to author.name, post_profile(post) %>
-		    </div>
+		    <%= link_to author.name, post_profile(post), :class => 'post_author' %>
 		    
 		    <div class="post_body"><%= nl2br(post.body) %></div>
 		    
@@ -33,7 +31,8 @@
     	<%= form_for :comment, :url => "/comments/ajax_add", :remote => true, :html => {:class => 'new_comment_form'} do |f| %>
       		<%= f.text_area :body, :class => "add_comment_body", :rows => 4 %>
       		<%= f.hidden_field :user_id, :value => current_user.id %>
-      		<%= f.hidden_field :post_id, :value => post.id %>
+      		<%= f.hidden_field :commentable_id, :value => post.id %>
+      		<%= f.hidden_field :commentable_type, :value => "Post" %>
       		<button type="submit" class="btn primary submit_comment_btn">Comment</button>
 			<button type="button" class="btn secondary cancel_comment_btn">Cancel</button>
 		<% end %>
