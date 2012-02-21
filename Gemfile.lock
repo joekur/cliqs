@@ -121,6 +121,7 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.8.0)
     ruby-hmac (0.4.0)
+    ruby-prof (0.10.8)
     sass (3.1.15)
     sass-rails (3.2.3)
       railties (~> 3.2.0.beta)
@@ -161,6 +162,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.1)
   rspec-rails
+  ruby-prof
   sass-rails (= 3.2.3)
   sqlite3 (= 1.3.5)
   uglifier (= 1.0.3)

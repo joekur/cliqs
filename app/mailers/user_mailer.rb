@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
   
   def domain
     if Rails.env.production?
-      "http://cliqs.herokuapp.com"
+      "http://www.cliqs.me"
     else
       "http://localhost:3000"
     end
