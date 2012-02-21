@@ -2,7 +2,7 @@
 
 <h1>Create new Cliq!</h1>
 
-<%= form_for(@cliq, :html => {:class => "form-stacked"} ) do |f| %>
+<%= form_for(@cliq, :html => {:class => "form-stacked loading"} ) do |f| %>
 
 	<%= render :partial => 'shared/error_messages', :locals => { :model => @cliq } %>
 	
@@ -28,5 +28,6 @@
 	</div>
 	
 	<%= f.submit "Create" %>
+	<%= image_tag "loading.gif", :class => "loading" %>
 
 <% end %>

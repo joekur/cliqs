@@ -4,7 +4,7 @@
 
 <div id="cliq_index_content">
 	
-	<button type="button" class="btn primary" id="new_post_btn">New Post</button>
+	<button type="button" class="btn secondary" id="new_post_btn">New Post</button>
 	
 	<div id="new_post_container">
 		<%= form_for :post, :url => "/posts/ajax_add", :remote => true, :html => {:class => 'new_post_form'} do |f| %>
@@ -36,5 +36,9 @@
 		<div class="photo_stream_container">
 			<%= image_tag photo.image_url(:square), :class => 'photo_stream', :id => 'photo_stream'+photo.id.to_s if photo.image? %>
 		</div>
+	<% end %>
+	
+	<% if @photos.length == 0%>
+		<br><br>No photos yet!
 	<% end %>
 </div>

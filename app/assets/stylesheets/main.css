@@ -76,6 +76,7 @@ img.loading {
 	display: none;
 }
 
+
 /* NAVIGATION MENU -----------------------------------------------------------------*/
 
 #topbar {
@@ -303,8 +304,7 @@ select#profile_birthdate_1i {
 	width: 500px;
 }
 textarea.add_post_body {
-	width: 540px;
-	padding: 0;
+	width: 530px;
 }
 
 .add_post_body {
