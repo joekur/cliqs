@@ -10,6 +10,7 @@ group :development do
   gem 'rspec-rails'
   gem 'annotate'
   gem 'ruby-prof'
+  gem 'awesome_print'
 end
 
 group :test do
