@@ -9,16 +9,17 @@ $(document).ready(function() {
 	var postBody = $('textarea.add_post_body');
 	var newPostForm = $('form.new_post_form');
 	
-	function newPostClick() {		
-		if (newPostBtn.text() == 'New Post') {
-			newPostBtn.text('Discard');
-		} else {
-			newPostBtn.text('New Post');
-		}
-		
-		newPostContainer.toggle();
+	function newPostClick() {
+		newPostContainer.toggle(0, function() {
+			if (newPostBtn.text() == 'New Post') {
+				newPostBtn.text('Discard');
+				postBody.focus();
+			} else {
+				newPostBtn.text('New Post');
+			}
+		});
 		postBody.val('');
-	}	
+	}
 	
 	newPostBtn.click( newPostClick );
 	
@@ -78,8 +79,12 @@ $(document).ready(function() {
 		'click',
 		function() {
 			console.log('new comment desired');
-			console.log($(this).parent().next('.add_comment_container'));
-			$(this).parent().next('.add_comment_container').show(); // new comment container
+			$(this).parent().next('.add_comment_container')
+				.show(0, function(){
+					console.log($(this).find('textarea'));
+					$(this).find('textarea').focus();
+				});
+				
 		}
 	);
 	
