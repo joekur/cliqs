@@ -1,0 +1,36 @@
+<h3>Edit profile picture</h3>
+
+<div class="left_half">
+	
+	<%= form_for @profile, :url => "/profiles/update_prof_pic/"+@profile.id.to_s, :html => {:multipart => true, :class => 'form-stacked edit_prof_pic'} do |f| %>
+		<%= render :partial => '/shared/error_messages', :locals => {:model => @profile} %>
+		
+		<div class="field">
+			<%= f.file_field :pic %>
+		</div>
+		
+		<%= f.submit "Upload", :class => "btn primary uploadPic" %>
+		<%= link_to "Cancel", profile_path(@profile.id), :class => "btn secondary" %>
+		
+		
+	<% end %>
+	
+</div>
+
+<div class="right_half">
+	
+	<div class="crop_title">Crop me!</div>
+	
+	<div class="img_container">
+		<%= image_tag "loading.gif", :class => "loading" %>
+	</div>
+	
+	<%= form_for @profile do |form| %>
+		<% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>
+	    	<%= form.hidden_field attribute, :id => attribute %>
+		<% end %>
+		<%= form.submit "Crop", :class=> 'btn primary crop_btn', :disabled => "disabled" %>
+	<% end %>
+	
+</div>
+

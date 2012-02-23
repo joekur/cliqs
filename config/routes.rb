@@ -29,6 +29,10 @@ Cliqs::Application.routes.draw do
   match "cliqs/create_invites/:id", :to => 'cliqs#create_invites'
   match "cliqs/members/:id", :to => 'cliqs#members'
   
+  match "profiles/edit_prof_pic/:id", :to => 'profiles#edit_prof_pic'
+  match "profiles/ajax_add_prof_pic/:id", :to => 'profiles#ajax_add_prof_pic'
+  match "profiles/update_prof_pic/:id", :to => 'profiles#update_prof_pic'
+  
   root :to => 'sessions#new'
   match ':controller(/:action(/:id))'
   

@@ -1,0 +1,16 @@
+<h3>Edit profile picture</h3>
+
+	
+<%= form_for @profile, :url => "/profiles/update_prof_pic/"+@profile.id.to_s, :html => {:multipart => true, :class => 'form-stacked edit_prof_pic loading'} do |f| %>
+	<%= render :partial => '/shared/error_messages', :locals => {:model => @profile} %>
+	
+	<div class="field">
+		<%= f.file_field :pic %>
+	</div>
+	
+	<%= f.submit "Upload", :class => "btn primary uploadPic" %>
+	<%= link_to "Cancel", profile_path(@profile.id), :class => "btn secondary" %>
+	<%= image_tag "loading.gif", :class => "loading" %>
+	
+	
+<% end %>

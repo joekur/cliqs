@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   
   def ajax_add
     @post = Post.new(params[:post])
-    if @post.save
+    if @post.user_id==current_user.id && @post.save
       @success = true
     else
       @success = false

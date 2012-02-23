@@ -1,0 +1,24 @@
+<%= remotipart_response do %>
+
+<% if @success %>
+
+	$('img.loading').hide();
+	
+	var imageContainer = $('.img_container');
+	imageContainer.prepend("<%=j image_tag @profile.pic.url, :id => 'prof_crop_img' %>");
+	var pic = $('#prof_crop_img');
+	console.log(pic);
+	var img_width = <%= @width %>;
+	var img_height = <%= @height %>;
+	
+	imageContainer.animate({width: img_width, height: img_height}, 800, function() {
+		pic.fadeIn(800);
+		prepareProfPicJcrop(pic);
+	});
+	
+	
+
+<% end %>
+
+
+<% end %>

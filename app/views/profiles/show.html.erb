@@ -2,12 +2,18 @@
 
 <h1><%= @user.name %></h1>
 
-<% if current_user.id == @user.id %>
+<% if @is_myprofile %>
 	<%= link_to "Edit profile", edit_profile_path(@profile) %>
 <% end %>
 
 <div class="profile_picture">
-	<%= gravatar_for(@user) %>
+	<%= image_tag @profile.pic %>
+	
+	<% if @is_myprofile %>
+		<div class="edit_picture">
+			<%= link_to 'Change picture', '/profiles/edit_prof_pic/'+params[:id] %>	
+		</div>
+	<% end %>
 </div>
 
 <% if !@profile.quote.blank? %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120219190342) do
+ActiveRecord::Schema.define(:version => 20120223175057) do
 
   create_table "cliq_memberships", :force => true do |t|
     t.integer  "cliq_id"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20120219190342) do
     t.text     "quote"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "pic"
   end
 
   create_table "tickets", :force => true do |t|

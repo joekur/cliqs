@@ -240,15 +240,7 @@ textarea {
 	margin: 20px 0;
 }
 
-select#profile_birthdate_2i {
-	width: 110px;
-}
-select#profile_birthdate_3i {
-	width: 60px;
-}
-select#profile_birthdate_1i {
-	width: 80px;
-}
+
 
 /* TEMP BOX -----------------------------------------------------------------------*/
 .temp_box {
@@ -477,27 +469,6 @@ button.add_comment_btn:hover {
 	color: #666;
 }
 
-
-/* PROFILE -----------------------------------------------------------------*/
-.quote_box,
-.info_box {
-	padding: 10px;
-	width: 180px;
-	margin: 10px 0;
-	border-style: solid;
-	border-width: 1px;
-	border-color: gray;
-}
-
-.quote_box p {
-	margin-bottom: 0;
-}
-
-.profile_picture {
-	border: 1px solid black;
-	width: 200px;
-	height: 200px;
-}
 
 /* MEMBERS ------------------------------------------------------------------*/
 .member_link_container {

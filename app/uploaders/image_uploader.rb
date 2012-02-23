@@ -27,10 +27,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   process :resize_to_fit => [600, 600]
-  #
-  # def scale(width, height)
-  #   # do something
-  # end
+  process :convert => 'jpg'
 
   # Create different versions of your uploaded files:
   version :wall do
@@ -50,7 +47,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   def filename 
     if original_filename 
       @name ||= "image_" + Digest::MD5.hexdigest(File.dirname(current_path))
-      "#{@name}.#{file.extension}"
+      "#{@name}.jpg"
     end
   end
   
