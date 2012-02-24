@@ -28,12 +28,12 @@ gem 'json'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '3.2.3'
-  gem 'coffee-rails', '3.2.1'
+  gem 'sass-rails',   '3.2.4'
+  gem 'coffee-rails', '3.2.2'
   gem 'uglifier',     '1.0.3'
 end
 
-gem 'jquery-rails'#, '2.0.0'
+#gem 'jquery-rails'#, '2.0.0'
 #gem 'rmagick', '2.13.1'
 gem 'carrierwave'
 gem 'fog'
