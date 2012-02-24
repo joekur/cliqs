@@ -356,7 +356,8 @@ img.photo_stream:hover {
 	border: 1px solid black;
 	float: left;
 }
-.post_picture:hover {
+.post_picture:hover,
+.comment_picture:hover {
 	border-color: #AAA;
 }
 
@@ -400,6 +401,7 @@ a.comment_author:hover {
 .comment_right {
 	float: left;
 	margin-left: 20px;
+	width: 386px;
 }
 
 button.add_comment_btn {

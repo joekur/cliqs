@@ -12,22 +12,24 @@ module ApplicationHelper
   end
   
   def linkify(str)
+    out = str
+    
     # wrap <a> tags around any valid URLs in given string
-    #pattern_http = /^((?:https?:\/\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/
-    #pattern_www = /^((www\d{0,3}[.])(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/
-    pattern_http = /^((?:https?:\/\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)))/
-    pattern_www = /^((www\d{0,3}[.])(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)))/
+    pattern_http = /(^| )((?:https?:\/\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?]))/
+    pattern_www = /(^| )((www\d{0,3}[.])(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?]))/
+    #pattern_http = /((?:https?:\/\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)))|/
+    #pattern_www = /((www\d{0,3}[.])(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)))|/
     replace_http = "<a href=\"\\0\" rel=\"nofollow\">\\0</a>" 
     replace_www = "<a href=\"http://\\0\" rel=\"nofollow\">\\0</a>"
     
-    str.gsub! pattern_http do
+    out.gsub! pattern_http do
       %Q|<a href="#{$1}" rel="nofollow">#{$1}</a>|
     end
-    str.gsub! pattern_www do
+    out.gsub! pattern_www do
       %Q|<a href="http://#{$1}" rel="nofollow">#{$1}</a>|
     end
     
-    return str
+    return out
   end
   
   def post_profile(post) # works for either post or comment
@@ -46,7 +48,8 @@ module ApplicationHelper
   end
   
   def nl2br(str)
-    str = h str
+    str = h str # makes safe!!
+    #str = linkify str # not working :(
     str = str.gsub("\n\r","<br>").gsub("\r", "").gsub("\n", "<br />")
     str.html_safe
   end
