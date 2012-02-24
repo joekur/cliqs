@@ -34,6 +34,13 @@ GEM
     builder (3.0.0)
     carrierwave (0.5.8)
       activesupport (~> 3.0)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.2.0)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     excon (0.9.5)
@@ -137,7 +144,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.31)
-    uglifier (1.0.3)
+    uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     webrat (0.7.3)
@@ -153,9 +160,10 @@ DEPENDENCIES
   annotate
   awesome_print
   carrierwave
+  coffee-rails (= 3.2.2)
   factory_girl_rails
   fog
-  jquery-rails
+  jquery-rails (= 2.0.0)
   json
   mini_magick
   pg
@@ -165,5 +173,5 @@ DEPENDENCIES
   ruby-prof
   sass-rails (= 3.2.3)
   sqlite3 (= 1.3.5)
-  uglifier (= 1.0.3)
+  uglifier (= 1.2.3)
   webrat
