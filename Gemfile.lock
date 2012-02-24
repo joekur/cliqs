@@ -34,13 +34,6 @@ GEM
     builder (3.0.0)
     carrierwave (0.5.8)
       activesupport (~> 3.0)
-    coffee-rails (3.2.1)
-      coffee-script (>= 2.2.0)
-      railties (~> 3.2.0.beta)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.2.0)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     excon (0.9.5)
@@ -160,7 +153,6 @@ DEPENDENCIES
   annotate
   awesome_print
   carrierwave
-  coffee-rails (= 3.2.1)
   factory_girl_rails
   fog
   jquery-rails
