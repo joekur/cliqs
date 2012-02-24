@@ -29,9 +29,11 @@
 		width: 200px;
 		position: relative;
 		
+		
 		img {
 			display: block;
 			vertical-align: bottom;
+			max-width: 200px;
 		}
 		
 		.edit_picture {

@@ -11,7 +11,7 @@ class ProfilePicUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    "/images/fallback/" + [version_name, "default_profile.jpg"].compact.join('_')
+    "/assets/fallback/" + [version_name, "default_profile.jpg"].compact.join('_')
   end
 
   # Process files as they are uploaded:

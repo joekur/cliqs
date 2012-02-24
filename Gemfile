@@ -33,12 +33,12 @@ group :assets do
   gem 'uglifier',     '1.0.3'
 end
 
-#gem 'jquery-rails'#, '2.0.0'
+gem 'jquery-rails'#, '2.0.0'
 #gem 'rmagick', '2.13.1'
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
-#gem 'remotipart', '~> 0.4'
+gem 'remotipart', '~> 0.4'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
