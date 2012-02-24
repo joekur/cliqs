@@ -3,7 +3,7 @@
 <% @members.each do |member| %>
 	<div class="member_link_container">
 		<%= link_to member.profiles.where(:cliq_id => @current_cliq.id).first, :class => "member_image" do %>
-			<%= gravatar_for(member, 90) %>
+			<%= post_pic_for(member, 90) %>
 			<div class="member_name">
 				<%= member.first_name %>
 			</div>
