@@ -8,6 +8,7 @@ Cliqs::Application.routes.draw do
   get "users/useTicket"
   get "users/acceptInvite"
   get "users/remove_new_user_box"
+  match "users/changePassword", :to => 'users#changePassword'
   
   get "cliqMemberships/ajax_nav_rank"
 

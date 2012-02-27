@@ -21,6 +21,22 @@ class UsersController < ApplicationController
     end
   end
   
+  def changePassword
+    @user = current_user
+    if request.put?
+      old_pass = params[:user][:old_password]
+      params[:user].delete :old_password
+      if User.authenticate(@user.email, old_pass)
+        if @user.update_attributes(params[:user])
+          flash[:success] = "Password changed!"
+          redirect_to account_path
+        end
+      else
+        flash.now[:error] = "Wrong password!"
+      end
+    end
+  end
+  
   def useTicket
     sign_out
     @ticket = check_ticket(params[:token]) # will also purge expired tickets
@@ -83,8 +99,7 @@ class UsersController < ApplicationController
   
   def remove_new_user_box
     me = current_user
-    me.how_to_box = false
-    me.save
+    me.update_attribute(:how_to_box, false)
   end
   
 end

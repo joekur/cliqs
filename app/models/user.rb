@@ -15,8 +15,7 @@ class User < ActiveRecord::Base
   
   validates :password,  :presence => true,
                         :confirmation => true,
-                        :length => { :within => 6..40 },
-                        :on => :create
+                        :length => { :within => 6..40 }
   
   validates :first_name,  :presence => true,
                           :format => { :with => $az_regex }
@@ -25,7 +24,7 @@ class User < ActiveRecord::Base
                          :format => { :with => $az_regex }
   
   
-  before_save :encrypt_password, :only => :create
+  before_save :encrypt_password
   
   
   def has_password? (submitted_password)
