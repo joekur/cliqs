@@ -13,7 +13,7 @@ $(document).ready(function() {
 		newPostContainer.toggle(0, function() {
 			if (newPostBtn.text() == 'New Post') {
 				newPostBtn.text('Discard');
-				postBody.focus();
+				postBody.focus().css("height", "");
 			} else {
 				newPostBtn.text('New Post');
 			}
@@ -49,7 +49,7 @@ $(document).ready(function() {
 			$(this).parent().next('.add_comment_container')
 				.show(0, function(){
 					console.log($(this).find('textarea'));
-					$(this).find('textarea').focus();
+					$(this).find('textarea').focus().css("height", "");
 				});
 				
 		}
@@ -62,16 +62,6 @@ $(document).ready(function() {
 			me.find('textarea.add_comment_body').val('');
 		}
 	);
-	
-	function jsonResponse_AddComment(data, statusText, xhr, $form) {
-		console.log('new comment response');
-		if (data.success) {
-			console.log($form.parent().parent().append(data.html));
-		} else {
-			//TODO
-			console.log('new comment failure');
-		}
-	}
 	
 	
 	//
