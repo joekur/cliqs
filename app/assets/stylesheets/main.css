@@ -297,6 +297,7 @@ textarea {
 }
 textarea.add_post_body {
 	width: 530px;
+	height: 50px;
 }
 
 .add_post_body {

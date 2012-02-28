@@ -9,7 +9,7 @@
 	<div id="new_post_container">
 		<%= form_for :post, :url => "/posts/ajax_add", :remote => true, :html => {:class => 'new_post_form'} do |f| %>
 			<div class="field">
-				<%= f.text_area :body, :class => 'xxlarge add_post_body', :rows => 8 %>
+				<%= f.text_area :body, :class => 'add_post_body expandable', :rows => 8 %>
 			</div>
 			<%= f.hidden_field :user_id, :value => current_user.id %>
 			<%= f.hidden_field :cliq_id, :value => @current_cliq.id %>

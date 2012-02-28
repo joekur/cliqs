@@ -31,39 +31,6 @@ $(document).ready(function() {
 		console.log(data.success);
 		console.log(data['success']);
 	});
-    
-	/*function jsonResponse_AddPost(data) {
-		console.log(data);
-		if (data.success) {
-			newPostContainer.hide();
-			newPostBtn.text('New Post');
-			
-			// add new post to DOM
-			$('#post_wall').prepend(data.html);
-		} else {
-			//TODO
-			console.log('failure!');
-		}
-		
-	}*/	
-	
-	/*newPostForm.submit( function() {
-		if (!postBody.val()) { // if empty post, do nothing
-			return false;
-		}
-		var submitTo = newPostForm.attr('action');
-		console.log( submitTo );
-		
-		var options = {
-			dataType:  'json',
-			success: jsonResponse_AddPost,
-			resetForm: true
-		}
-		
-		$(this).ajaxSubmit(options); // from jquery_form.js
-		
-		return false; // prevent normal submit
-	});*/
 	
 	
 	//
@@ -106,32 +73,25 @@ $(document).ready(function() {
 		}
 	}
 	
-	/*new_comment_forms.live(
-		'submit', 
-		function() {
-			var submitTo = $(this).attr('action');
-			console.log( submitTo );
-			
-			var options = {
-				dataType: 'json',
-				success: jsonResponse_AddComment,
-				resetForm: true
-			}
-			
-			$(this).ajaxSubmit(options);
-			
-			$(this).parent().hide();
-			
-			return false;
-		}
-	);*/
-	
 	
 	//
 	// LOAD NEW CONTENT
 	//
 	
 	
+	
+	//
+	// TEXT AREAS
+	//
+	
+	var expandables = $('textarea.expandable');
+	
+	expandables.live("keypress", function() {
+		if ($(this).scrollTop() > 0) {
+			var height = $(this).height();
+			$(this).css('height', height + 50);
+		}
+	});
 	
 	
 });
