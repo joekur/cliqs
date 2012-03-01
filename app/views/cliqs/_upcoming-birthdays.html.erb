@@ -1,7 +1,8 @@
 <div class="upcoming_birthdays">
-	<b>Upcoming birthdays</b><br>
+	<b>Upcoming birthdays</b>
 	<% today = Time.local(Time.now.year, Time.now.month, Time.now.day) %>
 	<% profiles.each do |prof| %>
+		<br>
 		<% birthday = Time.local(Time.now.year, prof.birthdate.month, prof.birthdate.day)%>
 		<%= link_to prof.user.name, prof %> - 
 		<% if today == birthday %>
