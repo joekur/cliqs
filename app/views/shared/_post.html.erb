@@ -39,10 +39,6 @@
       
 	</div>
   
-	<div class="comments_container">
-		<% post.comments.each do |comment| %>
-			<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
-		<% end %>
-	</div>
+	<%= render :partial => "comments/comment-list", :locals => { :comments => post.comments } %>
   
 </div>

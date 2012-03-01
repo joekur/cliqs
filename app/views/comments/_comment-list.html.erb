@@ -1,0 +1,29 @@
+<% num_comments = comments.length %>
+
+<% if num_comments > 0 %>
+<div class="comments_container">
+<% else %>
+<div class="comments_container empty">	
+<% end %>
+	
+	<div class="comments_container_wraparound"></div>
+	
+	<% if num_comments > 2 %>
+		<div class="show_hidden_comments">
+			<a href='#'>See all <%= num_comments %> comments</a>
+		</div>
+		<div class="hidden_comments">
+			<% comments[0..(num_comments-3)].each do |comment| %>
+				<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
+			<% end %>
+		</div>
+		<% comments[(num_comments-2)..(num_comments-1)].each do |comment| %>
+			<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
+		<% end %>
+	<% else %>
+		<div class="hidden_comments"></div>
+		<% comments.each do |comment| %>
+			<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
+		<% end %>
+	<% end %>
+</div>

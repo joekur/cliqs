@@ -41,6 +41,7 @@ $(document).ready(function() {
 	var submit_comment_btns = $('button.submit_comment_btn');
 	var new_comment_forms = $('form.new_comment_form');
 	var cancel_comment_btn = $('button.cancel_comment_btn');
+	var show_hidden_comments_link = $('.show_hidden_comments a')
 	
 	new_comment_btns.live(
 		'click',
@@ -62,6 +63,13 @@ $(document).ready(function() {
 			me.find('textarea.add_comment_body').val('');
 		}
 	);
+	
+	show_hidden_comments_link.click(function() {
+		var parent = $(this).parent();
+		parent.hide();
+		parent.next('.hidden_comments').children().unwrap();
+		return false;
+	});
 	
 	
 	//

@@ -420,7 +420,7 @@ button.add_comment_btn:hover {
 
 .add_comment_container {
 	display: none;
-	background: #fff4ce;
+	background: #91dfff;
 	padding: 10px;
 	width: 520px;
 }
@@ -442,13 +442,42 @@ button.add_comment_btn:hover {
 	
 }
 
+.comments_container {
+	padding-left: 20px;
+	position: relative;
+}
+.comments_container.empty {
+	display: none;
+}
+
+.comments_container_wraparound {
+	width: 0; height: 0;
+	border-top: solid 10px #77c6d6;
+	border-right: solid 10px #77c6d6;
+	border-left: solid 10px transparent;
+	border-bottom: solid 10px transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .comment_container {
 	width: 474px;
-	padding: 10px 20px 10px 46px;
+	padding: 10px 20px 10px 26px;
 	background: #ffda77;
 }
-.comment_container:nth-child(even) {
+.comment_container:nth-of-type(even) {
 	background: #fff4ce;
+}
+
+.hidden_comments {
+	display: none;
+}
+
+.show_hidden_comments {
+	background: #ffda77;
+	text-align: center;
+	padding: 4px 0;
 }
 
 .comment_author {
