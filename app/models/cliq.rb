@@ -17,4 +17,25 @@ class Cliq < ActiveRecord::Base
     stories.sort{|x,y| y.latest_activity <=> x.latest_activity}
   end
   
+  def upcoming_birthdays
+    profiles = []
+    today = Time.now.month.month + Time.now.day.day
+    self.users.each do |member|
+      
+      prof = member.profiles.where(:cliq_id => self.id).first
+      if !prof.birthdate.nil?
+        birthday = prof.birthdate.month.month + prof.birthdate.day.day
+        if today - birthday > 0.day
+          birthday += 1.year # account for wraparound december>january
+        end
+        if birthday-today < 30.day
+          # upcoming birthday!
+          profiles.concat([prof])
+        end
+        
+      end
+    end
+    profiles
+  end
+  
 end

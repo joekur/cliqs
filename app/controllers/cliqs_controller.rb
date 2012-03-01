@@ -8,6 +8,7 @@ class CliqsController < ApplicationController
     @posts = @current_cliq.posts.order("created_at DESC")
     @photos = @current_cliq.photos.order("created_at DESC")
     @stories = Cliq.order_stories(@posts, @photos)
+    @upcoming_birthdays = @cliq.upcoming_birthdays
   end
 
   def new

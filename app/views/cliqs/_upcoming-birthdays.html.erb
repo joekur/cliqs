@@ -1,0 +1,15 @@
+<div class="upcoming_birthdays">
+	<b>Upcoming birthdays</b><br>
+	<% today = Time.local(Time.now.year, Time.now.month, Time.now.day) %>
+	<% profiles.each do |prof| %>
+		<% birthday = Time.local(Time.now.year, prof.birthdate.month, prof.birthdate.day)%>
+		<%= link_to prof.user.name, prof %> - 
+		<% if today == birthday %>
+			Today!
+		<% elsif birthday == today + 1.day || birthday + 1.year == today + 1.day %>
+			Tomorrow
+		<% else %>
+			<%= birthday.strftime("%b %d") %>
+		<% end %>
+	<% end %>
+</div>
