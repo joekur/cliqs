@@ -1,4 +1,5 @@
 Cliqs::Application.routes.draw do
+  
   get "posts/ajax_add"
   get "comments/ajax_add"
 
@@ -8,11 +9,15 @@ Cliqs::Application.routes.draw do
   get "users/useTicket"
   get "users/acceptInvite"
   get "users/remove_new_user_box"
-  match "users/changePassword", :to => 'users#changePassword'
   
   get "cliqMemberships/ajax_nav_rank"
 
-  resources :users
+  resources :users do
+    collection do
+      get 'changePassword'
+      put 'changePassword'
+    end
+  end
   resources :sessions #, only: [:new, :create, :destroy]
   resources :cliqs do
     resources :photos

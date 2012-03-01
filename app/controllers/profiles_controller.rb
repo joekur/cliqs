@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
   def show
     @profile = Profile.find(params[:id])
     @current_cliq = @profile.cliq
+    check_cliq_membership(@current_cliq)
     if @profile.user.id == current_user.id
       @is_myprofile = true
     else

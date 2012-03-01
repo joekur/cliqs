@@ -16,7 +16,9 @@
 		    <%= link_to author.name, post_profile(photo), :class => 'post_author' %> posted a photo
 		    
 		    <div class="photo_image_container">
-		    	<%= image_tag photo.image_url(:wall), :class => 'photo_image' if photo.image? %>	
+		    	<%= link_to cliq_photo_path(@current_cliq, photo) do %>
+		    		<%= image_tag photo.image_url(:wall), :class => 'photo_image' if photo.image? %>
+		    	<% end %>	
 		    </div>
 		    
 		    <div class="post_body"><%= nl2br(photo.body) %></div>

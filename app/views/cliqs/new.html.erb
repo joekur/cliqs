@@ -27,7 +27,8 @@
 			:placeholder => 'Add a customized message to your invite email'	%>
 	</div>
 	
-	<%= f.submit "Create" %>
+	<%= f.submit "Create", :class => 'btn primary' %>
 	<%= image_tag "loading.gif", :class => "loading" %>
+	<%= link_to "Cancel", users_url, :class => 'btn secondary' %>
 
 <% end %>

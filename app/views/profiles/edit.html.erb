@@ -12,5 +12,6 @@
 		<%= f.date_select :birthdate, :order => [:month, :day, :year], :start_year => 1900, :end_year => Time.now.year %>
 	</div>
 	
-	<%= f.submit "Save" %>
+	<%= f.submit "Save" :class => 'btn primary' %>
+	<%= link_to "Cancel", cliq_url(@current_cliq), :class => 'btn secondary' %>
 <% end %>

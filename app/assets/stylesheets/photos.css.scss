@@ -1,3 +1,31 @@
-// Place all the styles related to the Photos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.big-photo {
+  display: block;
+  margin: 0 auto;
+}
+
+.photos-show-left {
+  width: 600px;
+  float: left;
+}
+
+.photos-show-right {
+  float: left;
+  width: 340px;
+  margin-left: 20px;
+  
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .comment_container {
+    background: none;
+    width: 340px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .comment_right {
+    width: 230px;
+  }
+}

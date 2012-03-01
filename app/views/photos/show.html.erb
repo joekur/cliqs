@@ -1,0 +1,27 @@
+
+<div class="photos-show-left">
+
+	<%= image_tag @photo.image_url, :class => 'big-photo' %>
+	<br>
+	<div class="post_picture">
+		<%= link_to post_pic_for(@photo.user, 90), post_profile(@photo) %>
+	</div>
+	
+	<div class="post_right">
+	    <%= link_to @photo.user.name, post_profile(@photo), :class => 'post_author' %>
+	    
+	    <div class="post_body"><%= nl2br(@photo.body) %></div>
+	    
+	    <div class="post_time"><%= format_datetime(@photo.created_at) %></div>
+	</div>
+
+</div>
+
+
+<div class="photos-show-right">
+	<% @photo.comments.each do |comment| %>
+		<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
+	<% end %>
+</div>
+
+<div class="clear"></div>

@@ -2,11 +2,13 @@ class PhotosController < ApplicationController
   
   def new
     @current_cliq = Cliq.find(params[:cliq_id])
+    check_cliq_membership(@current_cliq)
     @photo = Photo.new
   end
   
   def create
      @current_cliq = Cliq.find(params[:cliq_id])
+     check_cliq_membership(@current_cliq)
      @photo = Photo.new(params[:photo])
      @photo.cliq_id = @current_cliq.id
      @photo.user_id = current_user.id
@@ -17,6 +19,12 @@ class PhotosController < ApplicationController
        flash.now['error'] = "Error saving photo"
        render 'new'
      end
+  end
+  
+  def show
+    @current_cliq = Cliq.find(params[:cliq_id])
+    check_cliq_membership(@current_cliq)
+    @photo = Photo.find(params[:id])
   end
   
   def destroy

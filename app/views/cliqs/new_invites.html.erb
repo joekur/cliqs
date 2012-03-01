@@ -18,6 +18,7 @@
 			:placeholder => 'Add a customized message to your invite email'	%>
 	</div>
 	
-	<%= submit_tag "Create" %>
+	<%= submit_tag "Create", :class => 'btn primary' %>
+	<%= link_to "Cancel", cliq_url(@current_cliq), :class => 'btn secondary' %>
 
 <% end %>

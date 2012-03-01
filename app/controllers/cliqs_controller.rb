@@ -1,6 +1,6 @@
 class CliqsController < ApplicationController
   include TicketsHelper
-  before_filter :check_cliq_membership, :except => [:new, :create]
+  before_filter :cliqcont_check_cliq_membership, :except => [:new, :create]
   
   def show
     @cliq = Cliq.find(params[:id])
@@ -46,14 +46,9 @@ class CliqsController < ApplicationController
   
   private
     
-    def check_cliq_membership
+    def cliqcont_check_cliq_membership
       if defined?(params[:id])
-        cliqmem = current_user.cliq_memberships.where(:cliq_id => params[:id]).first
-        if cliqmem.nil?
-          # sorry, not allowed! (we emphasize privacy!)
-          flash[:error] = "Scram! You're not a member of that cliq!"
-          redirect_to users_path
-        end
+        check_cliq_membership(Cliq.find_by_id(params[:id]))
       end
     end
     
