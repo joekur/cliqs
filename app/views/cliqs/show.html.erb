@@ -34,11 +34,13 @@
 	
 	<% @photos.each do |photo| %>
 		<div class="photo_stream_container">
-			<%= image_tag photo.image_url(:square), :class => 'photo_stream', :id => 'photo_stream'+photo.id.to_s if photo.image? %>
+			<%= link_to cliq_photo_path(@current_cliq, photo) do %>
+				<%= image_tag photo.image_url(:square), :class => 'photo_stream', :id => 'photo_stream'+photo.id.to_s if photo.image? %>
+			<% end %>
 		</div>
 	<% end %>
 	
-	<% if @photos.length == 0%>
+	<% if @photos.length == 0 %>
 		<br><br>No photos yet!
 	<% end %>
 </div>

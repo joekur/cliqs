@@ -36,7 +36,7 @@
 	<div class="add_comment_container">
   
     	<%= form_for :comment, :url => "/comments/ajax_add", :remote => true, :html => {:class => 'new_comment_form'} do |f| %>
-      		<%= f.text_area :body, :class => "add_comment_body", :rows => 4 %>
+      		<%= f.text_area :body, :class => "add_comment_body expandable", :rows => 4 %>
       		<%= f.hidden_field :user_id, :value => current_user.id %>
       		<%= f.hidden_field :commentable_id, :value => photo.id %>
       		<%= f.hidden_field :commentable_type, :value => "Photo" %>
