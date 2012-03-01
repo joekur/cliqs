@@ -1,7 +1,9 @@
 
 <div class="photos-show-left">
-
-	<%= image_tag @photo.image_url, :class => 'big-photo' %>
+	
+	<div class="big-photo-container">
+		<%= image_tag @photo.image_url, :class => 'big-photo' %>
+	</div>
 	<br>
 	<div class="post_picture">
 		<%= link_to post_pic_for(@photo.user, 90), post_profile(@photo) %>

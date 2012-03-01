@@ -15,6 +15,7 @@
 		<div class="post_right">
 		    <%= link_to author.name, post_profile(photo), :class => 'post_author' %> posted a photo
 		    
+		    <br>
 		    <div class="photo_image_container">
 		    	<%= link_to cliq_photo_path(@current_cliq, photo) do %>
 		    		<%= image_tag photo.image_url(:wall), :class => 'photo_image' if photo.image? %>
