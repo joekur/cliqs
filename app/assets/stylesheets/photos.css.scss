@@ -24,9 +24,21 @@
     margin: 0;
   }
   
+  .add_comment_container {
+    width: 320px;
+    background: #3f3f3f;
+    display: block;
+  }
+  .add_comment_body {
+    width: 310px;
+  }
+  
+  .comments_container {
+    padding: 0;
+  }
+  
   .comment_container {
     width: 320px;
-    padding: 0;
     padding: 10px 10px;
   }
   

@@ -21,9 +21,21 @@
 
 
 <div class="photos-show-right">
-	<% @photo.comments.each do |comment| %>
-		<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
-	<% end %>
+	<div class="comments_container">
+		<% @photo.comments.each do |comment| %>
+			<%= render :partial => 'shared/comment', :locals => { :comment => comment } %>
+		<% end %>
+	</div>
+	
+	<div class="add_comment_container">
+    	<%= form_for :comment, :url => "/comments/ajax_add_photos_show", :remote => true, :html => {:class => 'new_comment_form'} do |f| %>
+      		<%= f.text_area :body, :class => "add_comment_body expandable", :rows => 3 %>
+      		<%= f.hidden_field :user_id, :value => current_user.id %>
+      		<%= f.hidden_field :commentable_id, :value => @photo.id %>
+      		<%= f.hidden_field :commentable_type, :value => "Photo" %>
+      		<button type="submit" class="btn primary submit_comment_btn">Comment</button>
+		<% end %>
+	</div>
 </div>
 
 <div class="clear"></div>

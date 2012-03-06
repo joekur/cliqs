@@ -2,6 +2,7 @@ Cliqs::Application.routes.draw do
   
   get "posts/ajax_add"
   get "comments/ajax_add"
+  get "comments/ajax_add_photo_show"
 
   #get "sessions/new"
 
