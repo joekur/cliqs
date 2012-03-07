@@ -23,7 +23,7 @@ class Cliq < ActiveRecord::Base
     self.users.each do |member|
       
       prof = member.profiles.where(:cliq_id => self.id).first
-      if !prof.blank && !prof.birthdate.nil?
+      if !prof.blank? && !prof.birthdate.nil?
         birthday = prof.birthdate.month.month + prof.birthdate.day.day
         if today - birthday > 0.day
           birthday += 1.year # account for wraparound december>january
