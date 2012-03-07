@@ -88,6 +88,7 @@ class UsersController < ApplicationController
           # check we are not already a member
           if login_user.cliqs.find_by_id(@cliq).nil?
             login_user.cliqs << @cliq
+            login_user.profiles << Profile.new({:cliq_id => @cliq.id})
             redirect_to users_path, :flash => {:success => "Joined new cliq!"}
           else
             redirect_to users_path, :flash => {:error => "You are already in that cliq!"}
