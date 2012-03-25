@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120223175057) do
+ActiveRecord::Schema.define(:version => 20120219190342) do
 
   create_table "cliq_memberships", :force => true do |t|
     t.integer  "cliq_id"
     t.integer  "user_id"
     t.boolean  "accepted"
     t.integer  "nav_rank"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.boolean  "get_photo_email", :default => true
   end
 
   create_table "cliqs", :force => true do |t|
@@ -61,7 +62,6 @@ ActiveRecord::Schema.define(:version => 20120223175057) do
     t.text     "quote"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "pic"
   end
 
   create_table "tickets", :force => true do |t|

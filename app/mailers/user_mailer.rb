@@ -17,5 +17,9 @@ class UserMailer < ActionMailer::Base
     
     mail(:to => emailAdd, :subject => "You have received a Cliqs invite!")
   end
+
+  def notification_email(object)
+
+  end
   
 end
