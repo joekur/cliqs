@@ -1,7 +1,11 @@
-<b><%= comment.user.name %></b> has commented on <b><%= comment.post.user.name %>'s</b> post in <b><%= comment.post.cliq.name %></b>:<br>
+<b><%= comment.user.name %></b> has commented on <b><%= comment.commentable.user.name %>'s</b> <%= comment.commentable.class.name.downcase %> in <b><%= comment.commentable.cliq.name %></b>:<br>
 <br>
 <div style="padding-left: 20px;">
 	<%= nl2br(comment.body) %>
 </div>
 <br>
-Click <%= link_to "here", post_url(post, only_path: false) %> to view the post.
+<% if comment.commentable.class.name == "Post" %>
+Click <%= link_to "here", post_url(comment.commentable, only_path: false) %> to view the post.
+<% else %>
+	Click <%= link_to "here", cliq_photo_url(comment.commentable.cliq, comment.commentable, only_path: false) %> to view the post.
+<% end %>
