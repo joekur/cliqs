@@ -5,7 +5,7 @@
 </div>
 <br>
 <% if comment.commentable.class.name == "Post" %>
-Click <%= link_to "here", post_url(comment.commentable, only_path: false) %> to view the post.
+	Click <%= link_to "here", post_url(comment.commentable, only_path: false) %> to view the post.
 <% else %>
-	Click <%= link_to "here", cliq_photo_url(comment.commentable.cliq, comment.commentable, only_path: false) %> to view the post.
+	Click <%= link_to "here", cliq_photo_url(comment.commentable.cliq, comment.commentable, only_path: false) %> to view the photo.
 <% end %>
