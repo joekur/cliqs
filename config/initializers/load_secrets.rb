@@ -1,4 +1,4 @@
-if Rails.env.production?
+if Rails.env.development?
 
   SECRETS = YAML.load_file("#{Rails.root}/config/secrets.yml")[Rails.env]
 
