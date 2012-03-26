@@ -1,6 +1,17 @@
 
 require File.expand_path('../boot', __FILE__)
 
+# load in secrets
+require 'yaml'
+if File.exists?(File.expand_path('../secrets.yml', __FILE__))
+  SECRETS = YAML.load(File.read(File.expand_path('../secrets.yml', __FILE__)))
+
+  ENV['AWS_ACCESS_KEY_ID'] ||= SECRETS['AWS_ACCESS_KEY_ID']
+  ENV['AWS_SECRET_ACCESS_KEY'] ||= SECRETS['AWS_SECRET_ACCESS_KEY']
+
+end
+
+
 require 'rails/all'
 
 if defined?(Bundler)

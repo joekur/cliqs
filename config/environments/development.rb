@@ -35,7 +35,7 @@ Cliqs::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :ses
   config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
   CarrierWave.configure do |wave|
@@ -45,10 +45,10 @@ Cliqs::Application.configure do
     
     wave.fog_credentials = {
       :provider               => 'AWS',
-      #:aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
-      #:aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
-      :aws_access_key_id      => 'AKIAIO674FQRSZABDCEQ',
-      :aws_secret_access_key  => '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',
+      :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
+      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
+      #:aws_access_key_id      => 'AKIAIO674FQRSZABDCEQ',
+      #:aws_secret_access_key  => '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',
     }
   end
   

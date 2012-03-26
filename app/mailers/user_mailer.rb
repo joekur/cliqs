@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   add_template_helper(ApplicationHelper)
-  default :from => "invites@cliqs.me"
+  default :from => "noreply@cliqs.me"
   
   def domain
     if Rails.env.production?
@@ -21,7 +21,7 @@ class UserMailer < ActionMailer::Base
 
   def notification_email(object, user)
     @object = object
-    mail(to: user.email, from: "noreply@cliqs.me", subject: "Cliqs Notification")
+    mail(to: user.email, subject: "Cliqs Notification")
   end
   
 end
