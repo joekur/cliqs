@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+
+  def show
+    @post = Post.find(params[:id])
+    @current_cliq = @post.cliq
+  end
   
   def ajax_add
     @post = Post.new(params[:post])

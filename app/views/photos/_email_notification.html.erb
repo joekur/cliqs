@@ -1,0 +1,8 @@
+<b><%= photo.user.name %></b> has added a photo to <b><%= photo.cliq.name %></b>:<br>
+<br>
+<div style="padding-left: 20px;">
+	<%= image_tag photo.image_url %><br>
+	<%= nl2br(photo.body) %>
+</div>
+<br>
+Click <%= link_to "here", cliq_photo_url(photo, only_path: false) %> to view the photo.

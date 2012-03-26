@@ -13,6 +13,7 @@ class PhotosController < ApplicationController
      @photo.cliq_id = @current_cliq.id
      @photo.user_id = current_user.id
      if @photo.save
+       @current_cliq.send_notification_emails(@photo)
        flash['success'] = "Photo saved!"
        redirect_to @current_cliq
      else
