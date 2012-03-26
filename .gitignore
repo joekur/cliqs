@@ -16,3 +16,5 @@
 
 /vendor/bundle
 .idea/
+
+*/secrets.yml

@@ -42,8 +42,8 @@ class Cliq < ActiveRecord::Base
     # sends email notifications to each member for post/picture/comment/etc
     users.each do |user|
       cliq_mem = user.cliq_memberships.where(cliq_id: self.id).first
-      if cliq_mem.receives_email_for(object)
-        #UserMailer.
+      if cliq_mem.receives_email_for(object) && user.id != object.user.id
+        UserMailer.notification_email(object, user).deliver
       end
     end
   end

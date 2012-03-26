@@ -16,10 +16,6 @@ class Post < ActiveRecord::Base
     end
     times.max
   end
-
-  def notification_body
-
-  end
   
   
 end

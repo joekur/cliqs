@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<title>Cliqs Notification</title>
+</head>
+
+<body>
+
+<% if @object.class.name == "Post" %>
+	<%= render partial: 'posts/email_notification', locals: {post: @object} %>
+<% elsif @object.class.name == "Photo" %>
+	<%= render partial: 'photos/email_notification', locals: {photo: @object} %>
+<% elsif @object.class.name == "Comment" %>
+	<%= render partial: 'comments/email_notification', locals: {comment: @object} %>
+<% end %>
+
+</body>
+
+</html>

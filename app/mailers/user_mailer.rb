@@ -1,4 +1,5 @@
 class UserMailer < ActionMailer::Base
+  add_template_helper(ApplicationHelper)
   default :from => "invites@cliqs.me"
   
   def domain
@@ -15,11 +16,12 @@ class UserMailer < ActionMailer::Base
     @message = message
     @url = domain + '/users/useTicket/?token=' + hashyToken
     
-    mail(:to => emailAdd, :subject => "You have received a Cliqs invite!")
+    mail(to: emailAdd, subject: "You have received a Cliqs invite!")
   end
 
-  def notification_email(object)
-
+  def notification_email(object, user)
+    @object = object
+    mail(to: user.email, from: "noreply@cliqs.me", subject: "Cliqs Notification")
   end
   
 end

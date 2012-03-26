@@ -1,0 +1,7 @@
+<b><%= post.user.name %></b> has posted in <b><%= post.cliq.name %></b>:<br>
+<br>
+<div style="padding-left: 20px;">
+	<%= nl2br(post.body) %>
+</div>
+<br>
+Click <%= link_to "here", root_path %> to view the post.

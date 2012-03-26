@@ -39,6 +39,8 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 gem 'remotipart', '~> 0.4'
+gem "aws-ses", "~> 0.4.1", :require => 'aws/ses'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
