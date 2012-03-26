@@ -5,4 +5,4 @@
 	<%= nl2br(photo.body) %>
 </div>
 <br>
-Click <%= link_to "here", cliq_photo_url(photo, only_path: false) %> to view the photo.
+Click <%= link_to "here", cliq_photo_url(photo.cliq, photo, only_path: false) %> to view the photo.
