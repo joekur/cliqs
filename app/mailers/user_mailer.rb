@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   add_template_helper(ApplicationHelper)
-  default :from => "noreply@cliqs.me"
+  default :from => "Cliqs <noreply@cliqs.me>"
   
   def domain
     if Rails.env.production?
