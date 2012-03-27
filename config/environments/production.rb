@@ -79,7 +79,9 @@ Cliqs::Application.configure do
     }
   end
 
-  Delayed::Job.scaler = :heroku_cedar
+  config.after_initialize do
+    Delayed::Job.scaler = :heroku_cedar
+  end
   
   
 end
