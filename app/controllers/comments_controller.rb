@@ -16,6 +16,7 @@ class CommentsController < ApplicationController
     @current_cliq = @comment.commentable.cliq
     if @comment.save
       @success = true
+      @current_cliq.send_notification_emails(@comment)
     else
       @success = false
     end 

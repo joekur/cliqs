@@ -41,6 +41,9 @@ gem 'mini_magick'
 gem 'remotipart', '~> 0.4'
 gem "aws-ses", "~> 0.4.1", :require => 'aws/ses'
 
+gem "delayed_job_active_record"
+gem "workless", "~> 1.0.1"
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

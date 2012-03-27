@@ -78,6 +78,8 @@ Cliqs::Application.configure do
       :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
     }
   end
+
+  Delayed::Job.scaler = :heroku_cedar
   
   
 end

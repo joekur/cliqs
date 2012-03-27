@@ -43,10 +43,11 @@ class Cliq < ActiveRecord::Base
     users.each do |user|
       cliq_mem = user.cliq_memberships.where(cliq_id: self.id).first
       if cliq_mem.receives_email_for(object) && user.id != object.user.id
-        UserMailer.notification_email(object, user).deliver
+        UserMailer.notification_email(object, user)
       end
     end
   end
+  handle_asynchronously :send_notification_emails
 
   
 end
