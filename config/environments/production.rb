@@ -81,7 +81,8 @@ Cliqs::Application.configure do
 
   config.after_initialize do
     Delayed::Job.scaler = :heroku_cedar
+    Delayed::Worker.max_attempts = 3
   end
-  
+
   
 end

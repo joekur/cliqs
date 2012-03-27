@@ -41,7 +41,8 @@ gem 'mini_magick'
 gem 'remotipart', '~> 0.4'
 gem "aws-ses", "~> 0.4.1", :require => 'aws/ses'
 
-gem "delayed_job_active_record"
+#gem "delayed_job_active_record"
+gem "delayed_job", "~> 2.1.4"
 gem "workless", "~> 1.0.1"
 
 
