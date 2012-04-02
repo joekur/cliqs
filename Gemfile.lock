@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ryanb/nested_form.git
+  revision: 486e0f0e93f3ca455d5d0fc7869053257b6afce2
+  specs:
+    nested_form (0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -73,6 +79,12 @@ GEM
       nokogiri (>= 1.4.4)
       ruby-hmac
     formatador (0.2.1)
+    haml (3.1.4)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     heroku (2.23.0)
       launchy (>= 0.3.2)
       netrc (~> 0.7.1)
@@ -197,9 +209,11 @@ DEPENDENCIES
   delayed_job (~> 2.1.4)
   factory_girl_rails
   fog
+  haml-rails
   jquery-rails
   json
   mini_magick
+  nested_form!
   pg
   rails (= 3.2.1)
   remotipart (~> 0.4)

@@ -1,0 +1,20 @@
+.placeholder {
+  color: #aaa;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field.checkbox {
+
+  label {
+    display: inline-block;
+    font-weight: normal;
+    margin-left: 6px;
+  }
+}

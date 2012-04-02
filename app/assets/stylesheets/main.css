@@ -20,6 +20,10 @@ body {
 	display: inline-block;
 }
 
+.hidden {
+    display: none;
+}
+
 .flash {
 	width: 100%;
 	padding: 10px 0;
@@ -223,20 +227,6 @@ img.home {
 	height: 24px;*/
 	width: 20px;
 	height: 16px;
-}
-
-/* FORMS -----------------------------------------------------------------*/
-
-.placeholder {
-	color: #aaa;
-}
-
-textarea {
-	resize: vertical;
-}
-
-.field {
-	margin: 20px 0;
 }
 
 

@@ -47,8 +47,6 @@ Cliqs::Application.configure do
       :provider               => 'AWS',
       :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
       :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
-      #:aws_access_key_id      => 'AKIAIO674FQRSZABDCEQ',
-      #:aws_secret_access_key  => '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',
     }
   end
   

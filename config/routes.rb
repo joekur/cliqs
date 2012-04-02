@@ -17,6 +17,8 @@ Cliqs::Application.routes.draw do
     collection do
       get 'changePassword'
       put 'changePassword'
+      get 'emailSettings'
+      put 'emailSettings'
     end
   end
   resources :sessions #, only: [:new, :create, :destroy]

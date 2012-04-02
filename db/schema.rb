@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120326044858) do
+ActiveRecord::Schema.define(:version => 20120402013207) do
 
   create_table "cliq_memberships", :force => true do |t|
     t.integer  "cliq_id"
@@ -92,12 +92,12 @@ ActiveRecord::Schema.define(:version => 20120326044858) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.string   "password"
+    t.string   "encrypted_password"
     t.string   "first_name"
     t.string   "last_name"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.boolean  "how_to_box", :default => true, :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.boolean  "how_to_box",         :default => true, :null => false
   end
 
 end

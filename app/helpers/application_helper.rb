@@ -74,5 +74,20 @@ module ApplicationHelper
       time.strftime("%B %d, %Y")
     end
   end
+
+
+  # FORM HELPERS
+
+  def check_box_for(f, field, options = {})
+    label = label_for(field, options)
+    content_tag(:div, class: "field checkbox") do
+      result = f.check_box(field, options)
+      result << f.label(field, label)
+    end.html_safe
+  end
+
+  def label_for(field, options)
+    options[:label] || field.to_s.gsub("_", " ").capitalize
+  end
   
 end

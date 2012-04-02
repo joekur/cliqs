@@ -1,0 +1,16 @@
+%h2 Email Settings
+
+= form_for current_user, url: '/users/emailSettings', html: {class: 'form-stacked email-settings'}, method: :put do |f|
+  = render :partial => 'shared/error_messages', :locals => { :model => @user }
+
+  %fieldset
+    %legend Email notifications
+    .field
+      = f.fields_for :cliq_memberships do |c_form|
+        %h4= c_form.object.cliq.name
+        = check_box_for(c_form, :get_post_email, label: 'Posts')
+        = check_box_for(c_form, :get_photo_email, label: 'Photos')
+        = check_box_for(c_form, :get_comment_email, label: 'Comments')
+
+  = f.submit "Save", class: 'btn primary'
+  = link_to "Cancel", users_path, class: 'btn secondary'

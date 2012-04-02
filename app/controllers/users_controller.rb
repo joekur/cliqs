@@ -36,6 +36,16 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def emailSettings
+    @user = current_user
+    if request.put?
+      if @user.update_attributes(params[:user])
+        flash[:success] = "Email settings changed"
+        redirect_to users_path
+      end
+    end
+  end
   
   def useTicket
     sign_out

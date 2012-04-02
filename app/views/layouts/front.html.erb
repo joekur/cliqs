@@ -4,8 +4,8 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-    <%= render 'layouts/stylesheets' %>
-    <%= stylesheet_link_tag 'front'%>
+		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
   </head>
   
   <body>

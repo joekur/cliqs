@@ -34,7 +34,8 @@ group :assets do
 end
 
 gem 'jquery-rails'#, '2.0.0'
-#gem 'rmagick', '2.13.1'
+gem 'haml-rails'
+gem 'nested_form', git: "https://github.com/ryanb/nested_form.git"
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
