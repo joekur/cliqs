@@ -36,7 +36,7 @@ end
 gem 'jquery-rails'#, '2.0.0'
 gem 'haml-rails'
 gem 'nested_form', git: "https://github.com/ryanb/nested_form.git"
-gem 'carrierwave'
+gem 'carrierwave', '0.6.0'
 gem 'fog'
 gem 'mini_magick'
 gem 'remotipart', '~> 0.4'
