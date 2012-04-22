@@ -29,11 +29,12 @@ class ProfilePicUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png tif tiff bmp)
   end
 
-  def filename 
-    if original_filename 
-      @name ||= "profpic_" + Digest::MD5.hexdigest(File.dirname(current_path))
-      "#{@name}.jpg"
-    end
+  def filename
+	  random_token = Digest::SHA2.hexdigest("#{Time.now.utc}--#{model.id.to_s}").first(30)
+	  ivar = "@#{mounted_as}_secure_token"
+	  token = model.instance_variable_get(ivar)
+	  token ||= model.instance_variable_set(ivar, random_token)
+	  "profpic_#{token}.jpg" if original_filename
   end
 
 end
