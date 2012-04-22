@@ -9,8 +9,8 @@
 	</div>
 	
 	<%= f.submit "Upload", :class => "btn primary uploadPic" %>
-	<%= link_to "Cancel", profile_path(@profile.id), :class => "btn secondary" %>
 	<%= image_tag "loading.gif", :class => "loading" %>
-	
+	<%= link_to "Cancel", profile_path(@profile.id), :class => "btn secondary" %>
+
 	
 <% end %>
