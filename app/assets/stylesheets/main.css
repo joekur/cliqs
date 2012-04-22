@@ -1,5 +1,6 @@
 body {
 	background: white;
+    word-wrap: break-word;
 }
 
 #container {
