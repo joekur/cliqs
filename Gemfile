@@ -46,6 +46,7 @@ gem "aws-ses", "~> 0.4.1", :require => 'aws/ses'
 gem "delayed_job", "~> 2.1.4"
 gem "workless", "~> 1.0.1"
 
+gem 'rails_autolink'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

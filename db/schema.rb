@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(:version => 20120402013207) do
     t.integer  "nav_rank"
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
-    t.boolean  "get_photo_email",   :default => true
     t.boolean  "get_post_email",    :default => true
+    t.boolean  "get_photo_email",   :default => true
     t.boolean  "get_comment_email", :default => true
   end
 

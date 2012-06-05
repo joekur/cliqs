@@ -14,7 +14,7 @@
 		<div class="post_right">
 		    <%= link_to author.name, post_profile(post), :class => 'post_author' %>
 		    
-		    <div class="post_body"><%= nl2br(post.body) %></div>
+		    <div class="post_body"><%= auto_link nl2br(post.body), :all, target: '_blank' %></div>
 		    
 		    <div class="post_time"><%= format_datetime(post.created_at) %></div>
 		</div>
